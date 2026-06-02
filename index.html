@@ -6,6 +6,8 @@
   <title>Michael Camilleri</title>
   <meta name="description" content="Michael Camilleri is a Maltese software engineer based in Seattle, building useful little things for the web." />
   <meta name="theme-color" content="#f8fafc" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
 
   <meta property="og:title" content="Michael Camilleri" />
   <meta property="og:description" content="Maltese software engineer based in Seattle, building useful little things for the web." />
@@ -32,13 +34,9 @@
       --radius: 28px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -321,6 +319,7 @@
     .side-stack {
       display: grid;
       gap: 18px;
+      align-content: start;
       animation: rise 850ms 160ms ease both;
     }
 
@@ -339,9 +338,7 @@
       letter-spacing: -0.045em;
     }
 
-    .side-card h2 {
-      font-size: 22px;
-    }
+    .side-card h2 { font-size: 22px; }
 
     .side-card p {
       margin: 12px 0 0;
@@ -407,9 +404,7 @@
       flex: 0 0 auto;
     }
 
-    section {
-      margin-top: 34px;
-    }
+    section { margin-top: 34px; }
 
     .section-title {
       display: flex;
@@ -419,9 +414,7 @@
       margin: 0 0 18px;
     }
 
-    .section-title h2 {
-      font-size: clamp(30px, 4vw, 46px);
-    }
+    .section-title h2 { font-size: clamp(30px, 4vw, 46px); }
 
     .section-title p {
       max-width: 460px;
@@ -459,13 +452,8 @@
       transition: transform 300ms ease, opacity 220ms ease;
     }
 
-    .project-card:nth-child(2)::before {
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-    }
-
-    .project-card:nth-child(3)::before {
-      background: linear-gradient(135deg, var(--amber), var(--blue));
-    }
+    .project-card:nth-child(2)::before { background: linear-gradient(135deg, var(--green), var(--cyan)); }
+    .project-card:nth-child(3)::before { background: linear-gradient(135deg, var(--amber), var(--blue)); }
 
     .project-card:hover {
       transform: translateY(-6px);
@@ -504,24 +492,16 @@
       transition: transform 180ms ease;
     }
 
-    .project-card:hover span::after {
-      transform: translateX(3px);
-    }
+    .project-card:hover span::after { transform: translateX(3px); }
 
-    .notes {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-    }
+    .notes { display: block; }
 
     .note-card {
       padding: 28px;
       border-radius: var(--radius);
     }
 
-    .note-card h3 {
-      font-size: 25px;
-    }
+    .note-card h3 { font-size: 25px; }
 
     .note-card p {
       margin: 12px 0 0;
@@ -616,14 +596,8 @@
     .delay-3 { animation-delay: 320ms; }
 
     @keyframes rise {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes floatBlob {
@@ -631,9 +605,7 @@
       50% { transform: translate3d(28px, 18px, 0) scale(1.04); }
     }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
     @keyframes shimmer {
       0%, 100% { background-position: 0% 50%; }
@@ -655,30 +627,12 @@
     }
 
     @media (max-width: 880px) {
-      .nav {
-        margin-bottom: 40px;
-      }
-
-      .hero,
-      .notes {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        min-height: 520px;
-      }
-
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        display: block;
-      }
-
-      .section-title p {
-        margin-top: 10px;
-      }
+      .nav { margin-bottom: 40px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-card { min-height: 520px; }
+      .projects { grid-template-columns: 1fr; }
+      .section-title { display: block; }
+      .section-title p { margin-top: 10px; }
     }
 
     @media (max-width: 620px) {
@@ -706,9 +660,7 @@
       .hero-card,
       .side-card,
       .note-card,
-      .project-card {
-        border-radius: 24px;
-      }
+      .project-card { border-radius: 24px; }
 
       .hero-card {
         min-height: 560px;
@@ -735,18 +687,12 @@
         white-space: normal;
       }
 
-      .stats {
-        grid-template-columns: 1fr;
-      }
+      .stats { grid-template-columns: 1fr; }
 
       .contact,
-      .footer {
-        display: block;
-      }
+      .footer { display: block; }
 
-      .contact-links {
-        margin-top: 16px;
-      }
+      .contact-links { margin-top: 16px; }
 
       .footer span:last-child {
         display: block;
@@ -803,6 +749,17 @@
         </section>
 
         <section class="side-card">
+          <h2>Elsewhere</h2>
+          <p>
+            Useful links for work, life outside work, and the things I’m building.
+          </p>
+          <div class="tags" aria-label="External links">
+            <a class="tag" href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="tag" href="https://www.instagram.com/michaelcamilleri" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </section>
+
+        <section class="side-card">
           <h2>Current interests</h2>
           <ul class="signal-list">
             <li>Software products with small, sharp MVPs</li>
@@ -855,17 +812,6 @@
           <span class="tag">Football</span>
         </div>
       </article>
-
-      <article class="note-card">
-        <h3>Elsewhere</h3>
-        <p>
-          For now, the useful links are probably LinkedIn for work, Instagram for life outside work, and the projects above for what I’m building.
-        </p>
-        <div class="tags" aria-label="External links">
-          <a class="tag" href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="tag" href="https://www.instagram.com/michaelcamilleri" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-      </article>
     </section>
 
     <section id="contact" class="contact reveal delay-3" aria-label="Contact">
@@ -874,7 +820,7 @@
         <span>Best for projects, collaboration, or anything that should not live in a LinkedIn DM.</span>
       </div>
       <div class="contact-links">
-        <a href="mailto:michael@michaelcamilleri.net">Email</a>
+        <a href="mailto:hello@michaelcamilleri.net">Email</a>
         <a href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
