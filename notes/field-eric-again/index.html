@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Field Eric, again · Michael Camilleri</title>
+  <meta name="description" content="A personal note on Field Eric, a small football app I've kept coming back to for years." />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Field Eric, again" />
+  <meta property="og:description" content="A personal note on Field Eric, a small football app I've kept coming back to for years." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/field-eric-again/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f8fafc; --paper:rgba(255,255,255,.88); --paper-strong:rgba(255,255,255,.96); --ink:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.09); --blue:#2563eb; --blue-deep:#1e3a8a; --coral:#e8614a; --shadow:0 24px 80px rgba(15,23,42,.10); --radius:28px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 18%,rgba(37,99,235,.11),transparent 36rem),linear-gradient(150deg,#fdf9f7 0%,#f0f4ff 60%,#f5f8ff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:28px 0 64px}
+
+    /* nav */
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:48px;animation:rise 700ms ease both}
+    .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:-.04em}
+    .brand-name{display:inline-flex;gap:.08em;letter-spacing:-.045em;text-transform:lowercase;text-shadow:0 2px 14px rgba(15,23,42,.16)}
+    .brand-word{font-weight:500}.brand-word strong{font-weight:900}
+    .brand-word.dark{color:var(--blue-deep)}.brand-word.light{color:var(--blue);margin-left:-.08em}
+    .brand-word.light strong{display:inline-block;transform:translateX(-.015em)}
+    .mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,23,42,.12);border-radius:14px;background:var(--paper-strong);box-shadow:0 14px 42px rgba(15,23,42,.08);overflow:hidden}
+    .mark-letter{display:inline-block;font-size:20px;line-height:1;font-weight:800;letter-spacing:-.17em;transform:translateX(-1px)}
+    .mark-letter.dark{color:var(--blue-deep)}.mark-letter.light{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(18px);box-shadow:0 14px 50px rgba(15,23,42,.08)}
+    .nav-links a{padding:10px 14px;border-radius:999px;color:#334155;font-size:14px;font-weight:700;transition:background 180ms ease,color 180ms ease,transform 180ms ease}
+    .nav-links a:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+    .nav-links a+a{position:relative}
+    .nav-links a+a::before{content:"";position:absolute;left:-5px;top:50%;width:1px;height:18px;transform:translateY(-50%);background:rgba(15,23,42,.10);pointer-events:none;transition:opacity 180ms ease}
+    .nav-links a:hover::before{opacity:0}
+
+    /* back link */
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:600;margin-bottom:40px;transition:color 180ms ease;animation:rise 700ms 60ms ease both}
+    .back-link:hover{color:var(--ink)}
+
+    /* article */
+    .article{max-width:700px;margin:0 auto;animation:rise 700ms 100ms ease both}
+    .article-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:7px 12px;border:1px solid rgba(232,97,74,.2);border-radius:999px;background:rgba(232,97,74,.07);color:var(--coral);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .article h1{margin:0 0 14px;font-size:clamp(32px,5vw,52px);line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+    .article-meta{margin:0 0 40px;padding-bottom:36px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+    .article-body{font-size:18px;line-height:1.8;color:#334155;letter-spacing:-.01em}
+    .article-body p{margin:0 0 26px}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
+    .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
+    .article-body a:hover{text-decoration-color:var(--blue)}
+
+    /* footer */
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+
+    @media (prefers-color-scheme:dark){
+      :root{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+      body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+      .nav-links{background:rgba(15,23,42,.7)}
+      .nav-links a{color:#94a3b8}
+      .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+      .nav-links a+a::before{background:rgba(255,255,255,.10)}
+      .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+      .article-body{color:#94a3b8}
+    }
+
+    @media (max-width:620px){
+      .page{width:min(100% - 28px,1120px);padding-top:16px}
+      .nav-links{display:none}
+      .nav{margin-bottom:28px}
+      .article-body{font-size:17px}
+      .footer{display:block}
+      .footer span:last-child{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../../" aria-label="Michael Camilleri home">
+        <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
+        <span class="brand-name"><span class="brand-word dark"><strong>m</strong>ichael</span><span class="brand-word light"><strong>c</strong>amilleri</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="../../#projects">Projects</a>
+        <a href="../../#notes">Notes</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <a href="../../#notes" class="back-link">← Notes</a>
+
+    <article class="article">
+      <div class="article-label">Football</div>
+      <h1>Field Eric, again</h1>
+      <p class="article-meta">June 2026</p>
+
+      <div class="article-body">
+        <p>I have been coming back to Field Eric for something like fourteen or fifteen years, which sounds slightly ridiculous because the thing itself is so simple.</p>
+
+        <p>Field Eric is a social football app for people who organize casual matches and need a few more players, and for players who would happily join a game if they knew one was happening. Someone has booked a pitch. The match is tonight. They are three players short. A few WhatsApp groups get messaged. Someone asks a cousin. Someone says "I'll let you know" and then disappears. At some point, the organizer either finds enough people or the match becomes awkward.</p>
+
+        <p>This is not a world-changing problem. It is not trying to be. But it is a real problem, and I have always liked software that starts there.</p>
+
+        <p>Field Eric originally came out of conversations with friends from Malta while I was living in London, around 2010 or 2011. One of the examples that stuck was a weekly match connected to Għ. F. Fondgħadir, a 5-a-side amateur football team. I should be honest here: I do not know much about Għ. F. Fondgħadir beyond the fact that the name came up in those early conversations. I liked it, partly because it made the problem sound more official than it probably was. The reality was much more ordinary: someone, somewhere, was trying to make a casual football match happen.</p>
+
+        <p>That ordinary problem is what stayed with me.</p>
+
+        <p>We tried building Field Eric back then, in the era when every small web app seemed to involve Facebook login, Rails, and a lot of optimism. It had some nice ideas. It also had the usual problems of side projects: too much scope, not enough time, and a product that was probably trying to be too many things before it had proved it could do one thing well.</p>
+
+        <p>Over the years, through moving countries, changing jobs, and watching the web change around it, the idea kept coming back. Part of the reason is that it still feels useful. Casual football has not gone away. The tools around it are still messy. WhatsApp groups are great until they are not. Facebook groups are useful, but they are not built around the actual flow of organizing a match. A person looking for a game and a person short of players should be easier to connect.</p>
+
+        <p>So I started rebuilding it.</p>
+
+        <p>The current version of Field Eric is intentionally small. An organizer can create a match. Players can see upcoming matches and ask to join. The organizer can manage requests. The first version is aimed at Malta, because that is where the original problem came from, and because Malta is small enough that something like this could actually find its first community.</p>
+
+        <p>The ambition, though, is not limited to Malta. The same problem exists anywhere people play casual football. It could be five-a-side in Sliema, seven-a-side in London, or a Sunday game somewhere else entirely. If the core loop works, the geography can change later.</p>
+
+        <p>Rebuilding it this time also felt different from the first attempt, mostly because the tools are different now. I do not think this version would exist without AI. Not because AI "built it for me." That is not what happened, and I do not find that framing especially useful. Software still needs taste. It needs decisions. It needs someone to care about what should be included, what should be left out, and what the thing is actually for.</p>
+
+        <p>But AI has changed the distance between idea and product.</p>
+
+        <p>You no longer need to be excellent at every layer of the stack at the same time. You do not have to be a backend specialist, database designer, DevOps engineer, frontend developer, UI designer, copywriter, tester, and product manager before you can make meaningful progress. You still need to understand enough to make good calls, and you still need to do the work. But the work moves faster.</p>
+
+        <p>For a side project like Field Eric, that matters. It means an idea that used to stay in a notebook, or in an old repository, or in a conversation with friends, can become something testable. Not perfect. Not finished. But real enough to put in front of people.</p>
+
+        <p>That is where Field Eric is now. I am hoping to launch soon, and I am starting by testing it with organizers in Malta. The goal is not to arrive with a grand platform and expect people to care. The goal is to find a few people who already organize casual football, understand how they do it, and see whether Field Eric can make one part of that job easier.</p>
+
+        <p>If you know someone who organizes casual football in Malta, please send them to <a href="https://fielderic.com/" target="_blank" rel="noopener noreferrer">Field Eric</a>. And if you are based in Malta and would like to help seed it locally, test it with real organizers, or just tell me why it will or will not work, I would <a href="../../#contact">love to hear from you</a>.</p>
+
+        <p>Small software. Clear job. Help a match happen.</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Michael Camilleri</span>
+      <span><a href="../../" style="color:inherit">michaelcamilleri.net</a></span>
+    </footer>
+  </main>
+</body>
+</html>
