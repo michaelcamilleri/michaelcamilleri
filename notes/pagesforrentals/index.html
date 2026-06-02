@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The quiet calendar behind PagesForRentals · Michael Camilleri</title>
+  <meta name="description" content="A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling. How PagesForRentals started." />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="The quiet calendar behind PagesForRentals" />
+  <meta property="og:description" content="A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling. How PagesForRentals started." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/pagesforrentals/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f8fafc; --paper:rgba(255,255,255,.88); --paper-strong:rgba(255,255,255,.96); --ink:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.09); --blue:#2563eb; --blue-deep:#1e3a8a; --coral:#e8614a; --shadow:0 24px 80px rgba(15,23,42,.10); --radius:28px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 18%,rgba(37,99,235,.11),transparent 36rem),linear-gradient(150deg,#fdf9f7 0%,#f0f4ff 60%,#f5f8ff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:28px 0 64px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:48px;animation:rise 700ms ease both}
+    .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:-.04em}
+    .brand-name{display:inline-flex;gap:.08em;letter-spacing:-.045em;text-transform:lowercase;text-shadow:0 2px 14px rgba(15,23,42,.16)}
+    .brand-word{font-weight:500}.brand-word strong{font-weight:900}
+    .brand-word.dark{color:var(--blue-deep)}.brand-word.light{color:var(--blue);margin-left:-.08em}
+    .brand-word.light strong{display:inline-block;transform:translateX(-.015em)}
+    .mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,23,42,.12);border-radius:14px;background:var(--paper-strong);box-shadow:0 14px 42px rgba(15,23,42,.08);overflow:hidden}
+    .mark-letter{display:inline-block;font-size:20px;line-height:1;font-weight:800;letter-spacing:-.17em;transform:translateX(-1px)}
+    .mark-letter.dark{color:var(--blue-deep)}.mark-letter.light{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(18px);box-shadow:0 14px 50px rgba(15,23,42,.08)}
+    .nav-links a{padding:10px 14px;border-radius:999px;color:#334155;font-size:14px;font-weight:700;transition:background 180ms ease,color 180ms ease,transform 180ms ease}
+    .nav-links a:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+    .nav-links a+a{position:relative}
+    .nav-links a+a::before{content:"";position:absolute;left:-5px;top:50%;width:1px;height:18px;transform:translateY(-50%);background:rgba(15,23,42,.10);pointer-events:none;transition:opacity 180ms ease}
+    .nav-links a:hover::before{opacity:0}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:600;margin-bottom:40px;transition:color 180ms ease;animation:rise 700ms 60ms ease both}
+    .back-link:hover{color:var(--ink)}
+    .article{max-width:700px;margin:0 auto;animation:rise 700ms 100ms ease both}
+    .article-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:7px 12px;border:1px solid rgba(232,97,74,.2);border-radius:999px;background:rgba(232,97,74,.07);color:var(--coral);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .article h1{margin:0 0 14px;font-size:clamp(32px,5vw,52px);line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+    .article-meta{margin:0 0 40px;padding-bottom:36px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+    .article-body{font-size:18px;line-height:1.8;color:#334155;letter-spacing:-.01em}
+    .article-body p{margin:0 0 26px}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
+    .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
+    .article-body a:hover{text-decoration-color:var(--blue)}
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+    @media (prefers-color-scheme:dark){
+      :root{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+      body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+      .nav-links{background:rgba(15,23,42,.7)}
+      .nav-links a{color:#94a3b8}
+      .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+      .nav-links a+a::before{background:rgba(255,255,255,.10)}
+      .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+      .article-body{color:#94a3b8}
+    }
+    @media (max-width:620px){
+      .page{width:min(100% - 28px,1120px);padding-top:16px}
+      .nav-links{display:none}
+      .nav{margin-bottom:28px}
+      .article-body{font-size:17px}
+      .footer{display:block}
+      .footer span:last-child{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../../" aria-label="Michael Camilleri home">
+        <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
+        <span class="brand-name"><span class="brand-word dark"><strong>m</strong>ichael</span><span class="brand-word light"><strong>c</strong>amilleri</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="../../#projects">Projects</a>
+        <a href="../../#notes">Notes</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <a href="../../#notes" class="back-link">← Notes</a>
+
+    <article class="article">
+      <div class="article-label">Rentals</div>
+      <h1>The quiet calendar behind <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></h1>
+      <p class="article-meta">June 2026</p>
+
+      <div class="article-body">
+        <p><span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> started with a quiet calendar.</p>
+
+        <p>Last summer, our apartment in Malta began well. We had bookings, good feedback, and the early signs that the place could work as a short-term rental. Then the calendar went quiet. From October to February, we had no bookings at all.</p>
+
+        <p>That forced me to look more closely at the parts of the business I could actually control.</p>
+
+        <p>I could not control seasonality. I could not control Airbnb's algorithm. I could not force someone to choose Mellieħa over another town. But I could control how the apartment showed up online.</p>
+
+        <p>We have a property manager, which makes sense in practical terms. We are not in Malta day to day, so someone local needs to handle guests, cleaning, check-ins, and the real-world details that make a stay work. But it also means we cannot easily change how the apartment presents itself on Airbnb or Booking.</p>
+
+        <h2>The parts we could own</h2>
+
+        <p>In hindsight, that limited how quickly we could react. But it also pushed me toward something useful: building the parts we could own.</p>
+
+        <p>A direct website felt like the obvious place to start. Not because I thought a website would magically replace Airbnb or Booking, but because the apartment needed a home of its own. Somewhere with clearer photos, better information, a bit more personality, and a way to show up outside the usual platform search results.</p>
+
+        <p>It also gave us a place to think about the stay after someone booked.</p>
+
+        <h2>A page for the stay itself</h2>
+
+        <p>Because we are not there in person, and because guests usually communicate through the property manager, I wanted a simple way for people to find practical information without digging through a printed folder or waiting for a reply. A link in the welcome email made more sense than a binder on a table.</p>
+
+        <p>That became the guest page.</p>
+
+        <p>One page with the things guests are likely to need: WiFi, check-in notes, house rules, useful local information, emergency details, and a few recommendations nearby. Nothing complicated. Just a calm, useful place to answer the small questions that come up during a stay.</p>
+
+        <h2>A way back for returning guests</h2>
+
+        <p>The direct site also matters after checkout. One thing I kept thinking about was repeat guests. On Airbnb, we are one listing among hundreds. With our own site, the apartment has a name, a place to return to, and a direct enquiry path for people who already know they liked it.</p>
+
+        <p>That can be better for us, but it can also be better for guests. If they come back directly, we save platform fees, and we can share some of that saving with them. It turns the website from a brochure into a small piece of the business.</p>
+
+        <h2>A second rental made the pattern obvious</h2>
+
+        <p>Around the same time, we also had Košice Central coming together: a small apartment in the old town of Košice with a very different market, but the same basic need. It needed a clean, trustworthy home online that was not just another platform listing. It also needed the same kind of guest page, because the practical problem was the same: guests need clear information, and hosts should not have to answer the same questions over and over again.</p>
+
+        <p>It was a different place, with a different kind of guest, but the same question kept coming up: what should a rental own online?</p>
+
+        <p>Once I was thinking about both properties, the pattern became obvious.</p>
+
+        <p>Independent rentals do not just need a nice landing page. They need a small web presence around the whole stay: before booking, after booking, and sometimes after checkout too.</p>
+
+        <h2>Naming the place properly</h2>
+
+        <p>Košice Central also taught me something about naming. It had a simple name, but it felt like a place. It was specific, memorable, and easy to point people to. Next to that, Malta Luxury Apartment started to feel weak. It described the property, but it did not give it much identity.</p>
+
+        <p>That is what eventually led to Town's End Malta. I wanted both rentals to have a stronger presence of their own, not just pages on Airbnb or Booking. Košice Central had shown me how much better that felt when the name, website, and guest information all pointed in the same direction.</p>
+
+        <h2>What <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> is for</h2>
+
+        <p>That is where <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> came from.</p>
+
+        <p>Not from a big product idea. Not from a pitch deck. Just from trying to solve our own problem carefully, then realising the same shape kept appearing.</p>
+
+        <p>A rental needs a place to be found. A place to explain itself. A place to help guests during the stay. And, maybe, a place people remember when they want to come back.</p>
+
+        <p>That is what I'm trying to build with <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span>: simple, useful websites for independent rentals that deserve a little more than a listing on someone else's platform.</p>
+
+        <p><a href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer"><span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></a> is live now, and so are the two rental sites that shaped it: <a href="https://townsendmalta.com/" target="_blank" rel="noopener noreferrer">Town's End Malta</a> and <a href="https://kosicecentral.com/" target="_blank" rel="noopener noreferrer">Košice Central</a>. Together, they show the idea: a direct home for the rental, useful information for guests, and a clearer way for people to come back.</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Michael Camilleri</span>
+      <span><a href="../../" style="color:inherit">michaelcamilleri.net</a></span>
+    </footer>
+  </main>
+</body>
+</html>
