@@ -99,8 +99,16 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
       letter-spacing: -0.04em;
+    }
+
+    .brand-name {
+      font-weight: 650;
+      text-transform: lowercase;
+    }
+
+    .brand-name strong {
+      font-weight: 900;
     }
 
     .mark {
@@ -589,7 +597,10 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(18px);
+    }
+
+    .reveal.is-visible {
       animation: rise 800ms ease both;
     }
 
@@ -620,6 +631,11 @@
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 1ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
 
@@ -703,7 +719,7 @@
     <header class="nav" aria-label="Primary navigation">
       <a class="brand" href="/" aria-label="Michael Camilleri home">
         <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
-        <span>Michael Camilleri</span>
+        <span class="brand-name"><strong>m</strong>ichael <strong>c</strong>amilleri</span>
       </a>
 
       <nav class="nav-links" aria-label="Page sections">
@@ -719,7 +735,7 @@
         <div class="eyebrow"><span class="dot"></span> Software engineer · Maltese · Seattle-based</div>
         <h1 id="hero-title"><span class="gradient-text">Useful little things</span> for the web.</h1>
         <p class="intro">
-          I’m a Maltese software engineer based in Seattle. By day, I work on payments software. The rest of the time, I build practical internet projects around football, rentals, and simple tools for real people. I also love photography, food, wine, travel, and being dad to Gaston, my stubborn and deeply lovable French bulldog.
+          I’m a Maltese software engineer based in Seattle. By day, I work on payments software. The rest of the time, I build practical internet projects around football, rentals, and simple tools. I also love photography, food, wine, travel, and being dad to Gaston, my stubborn and deeply lovable French bulldog.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View projects</a>
@@ -746,17 +762,6 @@
         </section>
 
         <section class="side-card">
-          <h2>Elsewhere</h2>
-          <p>
-            Useful links for work, life outside work, and the things I’m building.
-          </p>
-          <div class="tags" aria-label="External links">
-            <a class="tag" href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="tag" href="https://www.instagram.com/michaelcamilleri" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </section>
-
-        <section class="side-card">
           <h2>Current interests</h2>
           <ul class="signal-list">
             <li>Software products with small, sharp MVPs</li>
@@ -764,6 +769,17 @@
             <li>Casual football tools for organizers</li>
             <li>Clean interfaces, clear copy, fewer moving parts</li>
           </ul>
+        </section>
+
+        <section class="side-card">
+          <h2>Elsewhere</h2>
+          <p>
+            Useful links for work and life outside work.
+          </p>
+          <div class="tags" aria-label="External links">
+            <a class="tag" href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="tag" href="https://www.instagram.com/michaelcamilleri" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
         </section>
       </aside>
     </div>
@@ -827,5 +843,25 @@
       <span>Built simply. Kept useful.</span>
     </footer>
   </main>
+
+  <script>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealElements.forEach((element) => element.classList.add('is-visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      revealElements.forEach((element) => revealObserver.observe(element));
+    }
+  </script>
 </body>
 </html>
