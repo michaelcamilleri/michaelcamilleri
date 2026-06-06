@@ -26,6 +26,8 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 - **[Field Eric](https://fielderic.com)** — Social football app for casual match organisation
 - **[Pages for Rentals](https://pagesforrentals.com)** — Property website builder for independent hosts who want direct bookings
+- **[Townsend Malta](https://townsendmalta.com)** — Luxury apartment rental in Malta
+- **[Košice Central](https://kosicecentral.com)** — Short-term rental apartment in the heart of Košice's Old Town
 - **[Implementeurs](https://implementeurs.com)** — Software umbrella for experiments and web products
 
 ---
