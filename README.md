@@ -8,7 +8,7 @@
 [![Website](https://img.shields.io/badge/Website-michaelcamilleri.net-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://michaelcamilleri.net)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mcamilleri-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mcamilleri)<br/>
 [![Email](https://img.shields.io/badge/Email-hello@michaelcamilleri.net-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@michaelcamilleri.net)
-[![GitHub](https://img.shields.io/badge/GitHub-mcamilleri-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mcamilleri)
+[![GitHub](https://img.shields.io/badge/GitHub-michaelcamilleri-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/michaelcamilleri)
 
 </div>
 
@@ -24,11 +24,12 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ## What I'm Building
 
-- **[Field Eric](https://fielderic.com)** — Social football app for casual match organisation
-- **[Pages for Rentals](https://pagesforrentals.com)** — Property website builder for independent hosts who want direct bookings
-- **[Townsend Malta](https://townsendmalta.com)** — Short-term rental apartment in Mellieħa, Malta
-- **[Košice Central](https://kosicecentral.com)** — Short-term rental apartment in Košice, Slovakia
-- **[Implementeurs](https://implementeurs.com)** — Software umbrella for experiments and web products
+- **[Field Eric](https://fielderic.com)** - Social football app for casual match organisation
+- **[Pages for Rentals](https://pagesforrentals.com)** - Property website builder for independent hosts who want direct bookings
+- **[Townsend Malta](https://townsendmalta.com)** - Short-term rental apartment in Mellieħa, Malta
+- **[Košice Central](https://kosicecentral.com)** - Short-term rental apartment in Košice, Slovakia
+- **[Transfer Brief](https://www.instagram.com/transfer.brief)** - YouTube football videos translated into Instagram carousel cards
+- **[Implementeurs](https://implementeurs.com)** - Software umbrella for experiments and web products
 
 ---
 
@@ -52,7 +53,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ## Interests
 
-When not at a keyboard: photography, food, wine, travel, and wrangling a French bulldog named **Gaston**.
+When not at a keyboard: [photography](https://500px.com/MichaelCamilleri), food, wine, travel, and wrangling a French bulldog named **Gaston**.
 
 ---
 
