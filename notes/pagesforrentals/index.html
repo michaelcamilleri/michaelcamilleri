@@ -7,6 +7,7 @@
   <meta name="description" content="A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling. How PagesForRentals started." />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
   <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="The quiet calendar behind PagesForRentals" />
@@ -52,16 +53,14 @@
     .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
     @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
-    @media (prefers-color-scheme:dark){
-      :root{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
-      body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
-      .nav-links{background:rgba(15,23,42,.7)}
-      .nav-links a{color:#94a3b8}
-      .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
-      .nav-links a+a::before{background:rgba(255,255,255,.10)}
-      .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
-      .article-body{color:#94a3b8}
-    }
+    :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+    [data-theme="dark"] body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+    [data-theme="dark"] .nav-links{background:rgba(15,23,42,.7)}
+    [data-theme="dark"] .nav-links a{color:#94a3b8}
+    [data-theme="dark"] .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+    [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
+    [data-theme="dark"] .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+    [data-theme="dark"] .article-body{color:#94a3b8}
     @media (max-width:620px){
       .page{width:min(100% - 28px,1120px);padding-top:16px}
       .nav-links{display:none}

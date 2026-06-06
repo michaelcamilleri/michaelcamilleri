@@ -7,6 +7,7 @@
   <meta name="description" content="Michael Camilleri is a Maltese software engineer based in Seattle, building useful little things for the web." />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="Michael Camilleri" />
@@ -36,25 +37,24 @@
     .footer{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:#64748b;font-size:13px}.reveal{opacity:0;transform:translateY(18px)}.reveal.is-visible{animation:rise 800ms ease both}.reveal-item{opacity:0;transform:translateY(24px) scale(.985);transition:opacity 720ms ease,transform 720ms cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}.reveal.is-visible .reveal-item{opacity:1;transform:translateY(0) scale(1)}.delay-1{animation-delay:120ms}.delay-2{animation-delay:220ms}.delay-3{animation-delay:320ms}
     @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:1ms!important}.reveal,.reveal-item{opacity:1;transform:none}}
-    @media (prefers-color-scheme:dark){
-      :root{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
-      body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
-      .gradient-text{background:linear-gradient(120deg,#e2e8f0,#60a5fa);-webkit-background-clip:text;background-clip:text}
-      .hero-card::before{border-color:rgba(255,255,255,.06)}
-      .nav-links{background:rgba(15,23,42,.7)}
-      .nav-links a{color:#94a3b8}
-      .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
-      .nav-links a+a::before{background:rgba(255,255,255,.10)}
-      .eyebrow{background:rgba(255,255,255,.07);border-color:rgba(96,165,250,.2);color:#93c5fd}
-      .button.primary{background:var(--blue);box-shadow:0 18px 44px rgba(96,165,250,.2)}
-      .button.secondary{background:rgba(255,255,255,.09);color:#f1f5f9;border-color:rgba(255,255,255,.12)}
-      .intro{color:#94a3b8}
-      .stat{background:rgba(255,255,255,.05)}
-      .signal-list li{color:#94a3b8}
-      .tag{background:rgba(255,255,255,.06);color:#94a3b8;border-color:rgba(255,255,255,.10)}
-      .project-card span{color:#93c5fd}
-      .contact{background:rgba(30,41,59,.85);border-color:rgba(255,255,255,.12)}
-    }
+    :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+    [data-theme="dark"] body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+    [data-theme="dark"] .gradient-text{background:linear-gradient(120deg,#e2e8f0,#60a5fa);-webkit-background-clip:text;background-clip:text}
+    [data-theme="dark"] .hero-card::before{border-color:rgba(255,255,255,.06)}
+    [data-theme="dark"] .nav-links{background:rgba(15,23,42,.7)}
+    [data-theme="dark"] .nav-links a{color:#94a3b8}
+    [data-theme="dark"] .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+    [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
+    [data-theme="dark"] .eyebrow{background:rgba(255,255,255,.07);border-color:rgba(96,165,250,.2);color:#93c5fd}
+    [data-theme="dark"] .button.primary{background:var(--blue);box-shadow:0 18px 44px rgba(96,165,250,.2)}
+    [data-theme="dark"] .button.secondary{background:rgba(255,255,255,.09);color:#f1f5f9;border-color:rgba(255,255,255,.12)}
+    [data-theme="dark"] .intro{color:#94a3b8}
+    [data-theme="dark"] .stat{background:rgba(255,255,255,.05)}
+    [data-theme="dark"] .signal-list li{color:#94a3b8}
+    [data-theme="dark"] .tag{background:rgba(255,255,255,.06);color:#94a3b8;border-color:rgba(255,255,255,.10)}
+    [data-theme="dark"] .project-card span{color:#93c5fd}
+    [data-theme="dark"] .contact{background:rgba(30,41,59,.85);border-color:rgba(255,255,255,.12)}
+    .footer-right{display:inline-flex;align-items:center;gap:6px}.theme-toggle{background:none;border:none;padding:2px;color:inherit;cursor:pointer;display:inline-flex;align-items:center;opacity:.7;transition:opacity 180ms ease}.theme-toggle:hover{opacity:1}.theme-toggle svg{display:block}.theme-toggle .icon-sun{display:none}[data-theme="dark"] .theme-toggle .icon-sun{display:block}[data-theme="dark"] .theme-toggle .icon-moon{display:none}
     @media (max-width:880px){.nav{margin-bottom:32px}.hero{grid-template-columns:1fr}.hero-card{min-height:520px}.projects{grid-template-columns:1fr}.notes-list{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:10px}}
     @media (max-width:620px){.page{width:min(100% - 28px,1120px);padding-top:16px}.nav{margin-bottom:20px}.nav-links{display:none}.hero-card,.side-card,.note-card,.project-card{border-radius:24px}.hero-card{min-height:560px;padding:30px 24px}.hero-card::before{inset:12px;border-radius:20px}.eyebrow{align-items:flex-start;border-radius:22px;font-size:11px;line-height:1.45;white-space:normal}.stats{grid-template-columns:1fr}.contact,.footer{display:block}.contact-email-row{margin-top:16px}.footer span:last-child{display:block;margin-top:8px}}
   </style>
@@ -76,7 +76,7 @@
     <section id="notes" class="reveal delay-2" aria-labelledby="notes-title"><div class="section-title"><h2 id="notes-title">Notes.</h2></div><div class="notes-list"><a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 60ms"><div class="note-card-top"><span class="tag">Football</span><span class="note-date">June 2026</span></div><h3>Field Eric, again</h3><p>A personal note on Field Eric, a small football app I've kept coming back to for years.</p><span class="note-read">Read note →</span></a><a href="notes/pagesforrentals/" class="note-card reveal-item" style="--reveal-delay: 140ms"><div class="note-card-top"><span class="tag">Rentals</span><span class="note-date">June 2026</span></div><h3>The quiet calendar behind <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></h3><p>A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling.</p><span class="note-read">Read note →</span></a></div></section>
 
     <section id="contact" class="contact reveal delay-3" aria-label="Contact"><div><strong>Say hello.</strong><span>Best for projects, collaboration, or anything that should not live in a LinkedIn DM.</span></div><div class="contact-email-row"><a class="contact-email" href="mailto:hello@michaelcamilleri.net">hello@michaelcamilleri.net</a><button class="copy-email" type="button" data-copy="hello@michaelcamilleri.net" aria-label="Copy email address"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 8.5A2.5 2.5 0 0 1 10.5 6h6A2.5 2.5 0 0 1 19 8.5v8A2.5 2.5 0 0 1 16.5 19h-6A2.5 2.5 0 0 1 8 16.5v-8Z" stroke="currentColor" stroke-width="1.8"/><path d="M5 14.5v-7A2.5 2.5 0 0 1 7.5 5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div></section>
-    <footer class="footer"><span>© 2026 Michael Camilleri</span><span>Built simply. Kept useful.</span></footer>
+    <footer class="footer"><span>© 2026 Michael Camilleri</span><span class="footer-right">Built simply. Kept useful.<button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button></span></footer>
   </main>
   <script>
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -88,6 +88,21 @@
         entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
       }, { threshold: 0.16 });
       revealElements.forEach((element) => revealObserver.observe(element));
+    }
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const html = document.documentElement;
+      const updateLabel = () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      updateLabel();
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        updateLabel();
+      });
     }
     document.querySelectorAll('[data-copy]').forEach((button) => {
       button.addEventListener('click', async () => {
