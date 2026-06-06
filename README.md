@@ -17,7 +17,7 @@
 ## About Me
 
 A Maltese software engineer based in **Seattle** (and occasionally Malta and Slovakia).
-I build **payments software by day** and **practical internet projects by night** - around football, rentals, and simple tools that just work.
+I build **payments software by day** and **practical internet projects by night**. Football, rentals, and simple tools that just work.
 Over 20 years of coding experience, with a soft spot for clean UI, clear communication, and minimal viable products that ship.
 
 ---
