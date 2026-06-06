@@ -8,7 +8,7 @@
 [![Website](https://img.shields.io/badge/Website-michaelcamilleri.net-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://michaelcamilleri.net)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mcamilleri-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mcamilleri)<br/>
 [![Email](https://img.shields.io/badge/Email-hello@michaelcamilleri.net-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@michaelcamilleri.net)
-[![GitHub](https://img.shields.io/badge/GitHub-mcamilleri-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mcamilleri)
+[![GitHub](https://img.shields.io/badge/GitHub-michaelcamilleri-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/michaelcamilleri)
 
 </div>
 
