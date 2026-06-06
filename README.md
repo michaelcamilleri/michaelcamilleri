@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm Michael Camilleri
+# Michael Camilleri
 
 ### Software Engineer · 20+ Years Building for the Web
 **Java • Payments • Travel • Independent Products**
@@ -33,29 +33,41 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ---
 
-## Technical Skills
-
 ### Languages & Frameworks
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 
-### Data & Infrastructure
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+### Infrastructure & Cloud
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
+
+### Data
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
 
 ### Domains
 ![Payments](https://img.shields.io/badge/Payments-00A86B?style=for-the-badge&logo=stripe&logoColor=white)
-![REST APIs](https://img.shields.io/badge/REST_APIs-005C97?style=for-the-badge&logo=fastapi&logoColor=white)
+![3D Secure](https://img.shields.io/badge/3D_Secure-0052CC?style=for-the-badge&logo=visa&logoColor=white)
+![Network Certifications](https://img.shields.io/badge/Network_Certified-Visa_%7C_Mastercard_%7C_Amex-1A1F71?style=for-the-badge)
 
 ---
+
+## Education
+
+- **MRes Financial Computing** · University College London · 2010
+- **MSc Computer Science** · University of Oxford · 2008
+- **BSc Computing and Information Systems** · London Metropolitan University · 2007
 
 ## Interests
 
-When not at a keyboard: [photography](https://500px.com/MichaelCamilleri), food, wine, travel, and wrangling a French bulldog named **Gaston**.
-
----
+When not at a keyboard: food, wine, travel, wrangling a French bulldog named Gaston, and taking [photos](https://500px.com/MichaelCamilleri).
 
 ## Let's Connect
 
