@@ -50,17 +50,6 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ---
 
-## GitHub Analytics
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mcamilleri&show_icons=true&hide_border=true&bg_color=0D1117&title_color=0284c7&icon_color=0284c7)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mcamilleri&layout=compact&hide_border=true&bg_color=0D1117&title_color=0284c7)
-
-</div>
-
----
-
 ## Interests
 
 When not at a keyboard: photography, food, wine, travel, and wrangling a French bulldog named **Gaston**.
