@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm Michael Camilleri
+# Michael Camilleri
 
 ### Software Engineer · 20+ Years Building for the Web
 **Java • Payments • Travel • Independent Products**
