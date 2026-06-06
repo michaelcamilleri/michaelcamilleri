@@ -55,6 +55,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 ### Domains
 ![Payments](https://img.shields.io/badge/Payments-00A86B?style=for-the-badge&logo=stripe&logoColor=white)
 ![3D Secure](https://img.shields.io/badge/3D_Secure-0052CC?style=for-the-badge&logo=visa&logoColor=white)
+![Network Certifications](https://img.shields.io/badge/Network_Certified-Visa_%7C_Mastercard_%7C_Amex-1A1F71?style=for-the-badge)
 
 ---
 
