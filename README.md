@@ -2,7 +2,7 @@
 
 # Michael Camilleri
 
-### Software Engineer · 20+ Years Building for the Web
+### Software Engineer · 20+ Years building for the Web
 **Java • Payments • Travel • Independent Products**
 
 [![Website](https://img.shields.io/badge/Website-michaelcamilleri.net-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://michaelcamilleri.net)
@@ -67,7 +67,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ## Interests
 
-When not at a keyboard: food, wine, travel, wrangling a French bulldog named Gaston, and taking [photos](https://500px.com/MichaelCamilleri).
+When not at a keyboard: food, wine, travel, wrangling a French bulldog named Gaston, and [photography](https://500px.com/MichaelCamilleri).
 
 ## Let's Connect
 
