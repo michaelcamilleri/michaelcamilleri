@@ -2,7 +2,7 @@
 
 # Michael Camilleri
 
-### Software Engineer · 20+ Years building for the Web
+### Software Engineer · 20+ years building for the web
 **Java • Payments • Travel • Independent Products**
 
 [![Website](https://img.shields.io/badge/Website-michaelcamilleri.net-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://michaelcamilleri.net)
