@@ -458,6 +458,7 @@ section { margin-top: 56px; }
   background-size: 28px 28px;
   opacity: .2;
   pointer-events: none;
+  filter: invert(1);
 }
 
 .project-card:nth-child(1)::after { background-image: url('/images/icon-ball.svg'); }
@@ -812,6 +813,7 @@ a.tag:hover {
 [data-theme="dark"] .signal-list li        { color: #94a3b8; }
 [data-theme="dark"] .tag                   { background: rgba(255,255,255,.06); color: #94a3b8; border-color: rgba(255,255,255,.10); }
 [data-theme="dark"] .project-card span     { color: #93c5fd; }
+[data-theme="dark"] .project-card::after  { filter: none; }
 [data-theme="dark"] .contact               { background: rgba(30,41,59,.85); border-color: rgba(255,255,255,.12); }
 [data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
