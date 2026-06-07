@@ -3,7 +3,7 @@
 # Michael Camilleri
 
 ### Software Engineer · 20+ years building for the web
-**Java • Payments • Travel • Independent Products**
+**Java • Payments • Travel • Independent products**
 
 [![Website](https://img.shields.io/badge/Website-michaelcamilleri.net-0284c7?style=for-the-badge&logo=google-chrome&logoColor=white)](https://michaelcamilleri.net)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mcamilleri-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mcamilleri)<br/>
