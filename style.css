@@ -714,6 +714,17 @@ a.tag:hover {
   gap: 6px;
 }
 
+.footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  opacity: .6;
+  transition: opacity 180ms ease;
+}
+
+.footer-linkedin:hover {
+  opacity: 1;
+}
+
 .theme-toggle {
   background: none;
   border: none;
