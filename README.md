@@ -67,7 +67,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 ## Interests
 
-When not at a keyboard: food, wine, travel, wrangling a French bulldog named Gaston, and [photography](https://500px.com/MichaelCamilleri).
+When not at a keyboard: food, wine, travel, wrangling a French bulldog named Gaston, and [photography](https://mcam.pics).
 
 ## Let's Connect
 
