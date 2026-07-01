@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When AI Becomes a Workflow · Michael Camilleri</title>
+  <meta name="description" content="A note on MixologAI, a custom content tool, and the AI-assisted workflow behind it." />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="When AI Becomes a Workflow" />
+  <meta property="og:description" content="A note on MixologAI, a custom content tool, and the AI-assisted workflow behind it." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/when-ai-becomes-a-workflow/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f8fafc; --paper:rgba(255,255,255,.88); --paper-strong:rgba(255,255,255,.96); --ink:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.09); --blue:#2563eb; --blue-deep:#1e3a8a; --coral:#e8614a; --shadow:0 24px 80px rgba(15,23,42,.10); --radius:28px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 18%,rgba(37,99,235,.11),transparent 36rem),linear-gradient(150deg,#fdf9f7 0%,#f0f4ff 60%,#f5f8ff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:28px 0 48px}
+
+    /* nav */
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:48px;animation:rise 700ms ease both}
+    .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:-.04em}
+    .brand-name{display:inline-flex;gap:.08em;letter-spacing:-.045em;text-transform:lowercase;text-shadow:0 2px 14px rgba(15,23,42,.16)}
+    .brand-word{font-weight:500}.brand-word strong{font-weight:900}
+    .brand-word.dark{color:var(--blue-deep)}.brand-word.light{color:var(--blue);margin-left:-.08em}
+    .brand-word.light strong{display:inline-block;transform:translateX(-.015em)}
+    .mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,23,42,.12);border-radius:14px;background:var(--paper-strong);box-shadow:0 14px 42px rgba(15,23,42,.08);overflow:hidden}
+    .mark-letter{display:inline-block;font-size:20px;line-height:1;font-weight:800;letter-spacing:-.17em;transform:translateX(-1px)}
+    .mark-letter.dark{color:var(--blue-deep)}.mark-letter.light{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(18px);box-shadow:0 14px 50px rgba(15,23,42,.08)}
+    .nav-links a{padding:10px 14px;border-radius:999px;color:#334155;font-size:14px;font-weight:700;transition:background 180ms ease,color 180ms ease,transform 180ms ease}
+    .nav-links a:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+    .nav-links a+a{position:relative}
+    .nav-links a+a::before{content:"";position:absolute;left:-5px;top:50%;width:1px;height:18px;transform:translateY(-50%);background:rgba(15,23,42,.10);pointer-events:none;transition:opacity 180ms ease}
+    .nav-links a:hover::before{opacity:0}
+
+    /* back link */
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:600;margin-bottom:40px;transition:color 180ms ease;animation:rise 700ms 60ms ease both}
+    .back-link:hover{color:var(--ink)}
+
+    /* article */
+    .article{max-width:700px;margin:0 auto;animation:rise 700ms 100ms ease both}
+    .article-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:7px 12px;border:1px solid rgba(232,97,74,.2);border-radius:999px;background:rgba(232,97,74,.07);color:var(--coral);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .article h1{margin:0 0 14px;font-size:clamp(32px,5vw,52px);line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+    .article-meta{margin:0 0 40px;padding-bottom:36px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+    .article-body{font-size:18px;line-height:1.8;color:#334155;letter-spacing:-.01em}
+    .article-body p{margin:0 0 26px}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
+    .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
+    .article-body a:hover{text-decoration-color:var(--blue)}
+
+    /* footer */
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+
+    :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+    [data-theme="dark"] body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+    [data-theme="dark"] .nav-links{background:rgba(15,23,42,.7)}
+    [data-theme="dark"] .nav-links a{color:#94a3b8}
+    [data-theme="dark"] .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+    [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
+    [data-theme="dark"] .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+    [data-theme="dark"] .article-body{color:#94a3b8}
+
+    @media (max-width:620px){
+      .page{width:min(100% - 28px,1120px);padding-top:16px}
+      .nav-links{display:none}
+      .nav{margin-bottom:28px}
+      .article-body{font-size:17px}
+      .footer{display:block}
+      .footer span:last-child{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../../" aria-label="Michael Camilleri home">
+        <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
+        <span class="brand-name"><span class="brand-word dark"><strong>m</strong>ichael</span><span class="brand-word light"><strong>c</strong>amilleri</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="../../#projects">Projects</a>
+        <a href="../../#notes">Notes</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <a href="../../#notes" class="back-link">← Notes</a>
+
+    <article class="article">
+      <div class="article-label">AI &amp; making</div>
+      <h1>When AI Becomes a Workflow</h1>
+      <p class="article-meta">June 2026</p>
+
+      <div class="article-body">
+        <p>I recently put a small cocktail project online: <a href="https://mixologai.com/" target="_blank" rel="noopener noreferrer">mixologai.com</a>.</p>
+
+        <p>On the surface, it is a cocktail archive: house specs, bar notes, visual guides, and Instagram cards for drinks I like or want to understand better. A Manhattan with a split whiskey base. A Mai Tai that does not pretend pineapple juice belongs there. Bar notes about ice, glassware, vermouth, long drinks, and why cocktails with food are trickier than wine but sometimes more fun.</p>
+
+        <p>But the more interesting part, at least to me, is not really the website.</p>
+
+        <p>It is the workflow behind it.</p>
+
+        <h2>The cheesy first version</h2>
+
+        <p>MixologAI actually started as something much cheesier.</p>
+
+        <p>The first version was AI-generated video: a Mexican narrator explaining how to make Margaritas over shots of agave fields, or an Italian-American voice talking through a Negroni with moody bar footage in the background. It was fun, briefly. But it was also slow, expensive, and hard to control. Every video felt different. Every post required a new mini-production. After a while, it started to feel less like a creative project and more like a chore.</p>
+
+        <p>So I stopped.</p>
+
+        <p>But I still liked the idea: using AI to make cocktail content that was visual, atmospheric, and more polished than another recipe screenshot. When I came back to it, the lesson from the failed video version was obvious. The process had to be streamlined. Each post had to feel cohesive with the others. I needed a system, not a one-off production every time.</p>
+
+        <p>That is when AI stopped being a novelty and started becoming a workflow.</p>
+
+        <h2>The tool behind the posts</h2>
+
+        <p>MixologAI became a small Vite and React content tool. Each drink is structured data: title, subtitle, spec, method, notes, captions, card copy, and background images. The app renders the cards, lets me preview them, and exports Instagram-ready PNGs in the right dimensions. Later, I reused the same content to create the public website, so the Instagram cards and the web archive come from the same source of truth.</p>
+
+        <p>The goal was not just to make one good post. It was to make a repeatable format: the same rhythm, the same visual language, the same structure from drink to drink. A hero card, a spec card, a few notes, maybe a “why it works” card. Something polished enough to feel deliberate, but lightweight enough that I would actually keep making it.</p>
+
+        <p>That last part matters. Side projects often die because the process becomes annoying. If every post requires a blank-page design session, a new layout, a new export routine, and a lot of fiddling, eventually the fun disappears. I wanted MixologAI to avoid that. The tool had to make the good version easier than the lazy version.</p>
+
+        <h2>The loop</h2>
+
+        <p>Most posts begin as a conversation.</p>
+
+        <p>I come to ChatGPT with the next drink, or sometimes just a rough idea for a theme. We talk through what version is worth making, what details matter, what the cards should explain, and what tone the post should have. Sometimes it is recipe structure. Sometimes it is whether a detail is interesting enough to deserve its own card. Sometimes it is just me thinking out loud about why I like a drink.</p>
+
+        <p>Once the idea is clear, we turn it into a Codex prompt. That prompt tells Codex how to update the repo: what content to add, what cards to create, what the spec should be, what each card should say, and what visual direction the post should follow.</p>
+
+        <p>Then comes the image layer. Each card gets its own generated image. Not one generic cocktail photo reused everywhere, but a visual set: hero image, ingredient image, technique image, mood image, sometimes something more abstract. Those images get wired into the data file, previewed in the tool, adjusted if needed, and exported as final Instagram assets.</p>
+
+        <p>That loop — conversation, prompt, code, image, export — is really the thing I built.</p>
+
+        <h2>What AI changed</h2>
+
+        <p>The AI is not one thing in this process. It is a creative sounding board, an editor, a coding assistant, and an image studio. It helps me move from idea to structured post much faster than I could on my own. It helps keep the project visually consistent. It compresses the kind of work that would normally require a writer, designer, photographer, and developer into a workflow that one person can actually run.</p>
+
+        <p>But it does not decide what tastes good.</p>
+
+        <p>That part still matters. A cocktail spec has to work in the glass. A Manhattan still needs structure. A Martini still needs restraint. A Mai Tai still needs good rum and proper orgeat. AI can help shape the explanation, generate the images, and build the tooling, but it does not know when a split base needs adjusting or when a drink is simply too sweet.</p>
+
+        <p>The judgment is still human. The production is where AI changes everything.</p>
+
+        <h2>Beyond cocktails</h2>
+
+        <p>The tool worked well enough that I copied the approach for <a href="https://fielderic.com/" target="_blank" rel="noopener noreferrer">Field Eric</a>, my football match app. Different project, different tone, different audience — but the same underlying idea: structured content, reusable visual patterns, fast iteration, consistent output. Instead of starting from a blank page every time, I can build a system and let the system produce polished variations.</p>
+
+        <p>That is what feels new to me.</p>
+
+        <p>Not that AI can make a cocktail image. That is useful, but not enough.</p>
+
+        <p>What feels new is that AI helps make small creative systems possible. A personal cocktail archive can have the polish of a small publication. A local football app can have consistent social posts before it has a marketing team. A side project can have a visual language without waiting for the perfect budget, team, or process.</p>
+
+        <p>MixologAI is the first public version of that idea.</p>
+
+        <p>It is a cocktail archive, yes. But it is also a small experiment in what one person can make now: with taste, code, conversation, and a lot of iteration.</p>
+
+        <p>The drinks are still the point.</p>
+
+        <p>AI just made it possible to write them down properly.</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Michael Camilleri</span>
+      <span>Built simply. Kept useful.</span>
+    </footer>
+  </main>
+</body>
+</html>
