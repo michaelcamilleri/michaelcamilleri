@@ -26,6 +26,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 
 - **[Field Eric](https://fielderic.com)** - Social football app for casual match organisation
 - **[Pages for Rentals](https://pagesforrentals.com)** - Property website builder for independent hosts who want direct bookings
+- **[MixologAI](https://mixologai.com)** - AI-assisted cocktail guides, bar notes, and visual recipes for classic drinks
 - **[Townsend Malta](https://townsendmalta.com)** - Short-term rental apartment in Mellieħa, Malta
 - **[Košice Central](https://kosicecentral.com)** - Short-term rental apartment in Košice, Slovakia
 - **[Transfer Brief](https://www.instagram.com/transfer.brief)** - YouTube football videos translated into Instagram carousel cards
