@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The bottle is in there somewhere · Michael Camilleri</title>
+  <meta name="description" content="Washington wine, winter escapes to Sonoma, and the small piece of software I wanted for keeping track of it all." />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="The bottle is in there somewhere" />
+  <meta property="og:description" content="Washington wine, winter escapes to Sonoma, and the small piece of software I wanted for keeping track of it all." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/the-bottle-is-in-there-somewhere/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f8fafc; --paper:rgba(255,255,255,.88); --paper-strong:rgba(255,255,255,.96); --ink:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.09); --blue:#2563eb; --blue-deep:#1e3a8a; --coral:#e8614a; --shadow:0 24px 80px rgba(15,23,42,.10); --radius:28px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 18%,rgba(37,99,235,.11),transparent 36rem),linear-gradient(150deg,#fdf9f7 0%,#f0f4ff 60%,#f5f8ff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:28px 0 48px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:48px;animation:rise 700ms ease both}
+    .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:-.04em}
+    .brand-name{display:inline-flex;gap:.08em;letter-spacing:-.045em;text-transform:lowercase;text-shadow:0 2px 14px rgba(15,23,42,.16)}
+    .brand-word{font-weight:500}.brand-word strong{font-weight:900}
+    .brand-word.dark{color:var(--blue-deep)}.brand-word.light{color:var(--blue);margin-left:-.08em}
+    .brand-word.light strong{display:inline-block;transform:translateX(-.015em)}
+    .mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,23,42,.12);border-radius:14px;background:var(--paper-strong);box-shadow:0 14px 42px rgba(15,23,42,.08);overflow:hidden}
+    .mark-letter{display:inline-block;font-size:20px;line-height:1;font-weight:800;letter-spacing:-.17em;transform:translateX(-1px)}
+    .mark-letter.dark{color:var(--blue-deep)}.mark-letter.light{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(18px);box-shadow:0 14px 50px rgba(15,23,42,.08)}
+    .nav-links a{padding:10px 14px;border-radius:999px;color:#334155;font-size:14px;font-weight:700;transition:background 180ms ease,color 180ms ease,transform 180ms ease}
+    .nav-links a:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+    .nav-links a+a{position:relative}
+    .nav-links a+a::before{content:"";position:absolute;left:-5px;top:50%;width:1px;height:18px;transform:translateY(-50%);background:rgba(15,23,42,.10);pointer-events:none;transition:opacity 180ms ease}
+    .nav-links a:hover::before{opacity:0}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:600;margin-bottom:40px;transition:color 180ms ease;animation:rise 700ms 60ms ease both}
+    .back-link:hover{color:var(--ink)}
+    .article{max-width:700px;margin:0 auto;animation:rise 700ms 100ms ease both}
+    .article-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:7px 12px;border:1px solid rgba(232,97,74,.2);border-radius:999px;background:rgba(232,97,74,.07);color:var(--coral);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .article h1{margin:0 0 14px;font-size:clamp(32px,5vw,52px);line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+    .article-deck{margin:0 0 14px;color:var(--muted);font-size:18px;line-height:1.55;font-style:italic}
+    .article-meta{margin:0 0 40px;padding-bottom:36px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+    .article-body{font-size:18px;line-height:1.8;color:#334155;letter-spacing:-.01em}
+    .article-body p{margin:0 0 26px}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
+    .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
+    .article-body a:hover{text-decoration-color:var(--blue)}
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+    :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+    [data-theme="dark"] body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+    [data-theme="dark"] .nav-links{background:rgba(15,23,42,.7)}
+    [data-theme="dark"] .nav-links a{color:#94a3b8}
+    [data-theme="dark"] .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+    [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
+    [data-theme="dark"] .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+    [data-theme="dark"] .article-body{color:#94a3b8}
+    @media (max-width:620px){
+      .page{width:min(100% - 28px,1120px);padding-top:16px}
+      .nav-links{display:none}
+      .nav{margin-bottom:28px}
+      .article-body{font-size:17px}
+      .footer{display:block}
+      .footer span:last-child{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../../" aria-label="Michael Camilleri home">
+        <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
+        <span class="brand-name"><span class="brand-word dark"><strong>m</strong>ichael</span><span class="brand-word light"><strong>c</strong>amilleri</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="../../#projects">Projects</a>
+        <a href="../../#notes">Notes</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <a href="../../#notes" class="back-link">← Notes</a>
+
+    <article class="article">
+      <div class="article-label">Wine</div>
+      <h1>The bottle is in there somewhere</h1>
+      <p class="article-deck">Washington wine, winter escapes to Sonoma, and the small piece of software I wanted for keeping track of it all.</p>
+      <p class="article-meta">August 2026</p>
+
+      <div class="article-body">
+        <p>Seattle is home to some of the best craft breweries in the country, but we’re also surrounded by world-class wine. In fact, Washington is the second-largest wine-producing state in the US. That makes excellent wine remarkably easy to find, and rather too easy to bring home.</p>
+
+        <p>We also spend time in Sonoma most years. We have good friends there, and it gives us somewhere to escape the miserable Seattle winter for a while. Those trips offer great company, a change of scenery, and a relaxing sort of working holiday.</p>
+
+        <p>Frederika and I, and obviously Gaston, love visiting wineries and tasting rooms. We enjoy tasting the wines, but perhaps even more than that, we enjoy talking about them. We get to exchange thoughts with other enthusiasts, learn from people who know far more than we do, and occasionally hear the story directly from the person who made the wine. When the wine is lovely and the story behind it is even better, leaving empty-handed is almost impossible. Inevitably, a few too many bottles follow us home.</p>
+
+        <h2>Two overflowing coolers and a spreadsheet</h2>
+
+        <p>Our wine collection did not begin as a collection. We simply bought bottles we liked and intended to drink. Then there were bottles we wanted to save for a few years, bottles connected to memorable places or people, and bottles that seemed too interesting to leave behind. Eventually, they needed somewhere to live.</p>
+
+        <p>We now have two wine coolers, one in the kitchen and another in the garage. Both are overflowing, and the bottles that do not fit remain in boxes nearby, waiting for space to become available.</p>
+
+        <p>The details live in a Google Sheet. It records the producer, vintage, and grape, and sometimes a few other details: the purchase price or an estimated value, and a note to remind us where we bought it. The system works reasonably well.</p>
+
+        <p>Each cooler is laid out in the spreadsheet roughly as it exists in real life, with bottles placed in cells that correspond to their physical positions. If the sheet says a bottle is there, I know exactly where to find it.</p>
+
+        <p>The problem is that the spreadsheet is very basic. It shows the collection as it exists today, but it has no memory. Once a bottle is drunk and removed from its cell, it is simply gone. There is no history of when it was bought, moved, opened with a Coravin, or finally consumed, and no proper place to keep tasting notes.</p>
+
+        <p>The physical layout also makes clever searching and filtering difficult. It is easy to find a bottle when I already know what I want, but much harder to ask which Italian wines are ready to drink, what we brought home from a particular trip, or which bottles we have already tasted.</p>
+
+        <p>Keeping the spreadsheet accurate requires another manual edit whenever a bottle is added, removed, or moved between a box and one of the coolers. The bottles themselves do not make organization any easier. Burgundy bottles are wide, Riesling bottles are long, and Champagne bottles seem designed to ensure that any neat storage system eventually fails.</p>
+
+        <p>With two overflowing coolers and more bottles waiting in boxes, the spreadsheet has become increasingly awkward to maintain. It solves the location problem, but it still feels like managing a spreadsheet rather than enjoying a wine collection.</p>
+
+        <h2>A very specific problem</h2>
+
+        <p>I did not spend months exhaustively researching every wine-cellar app available. I looked at a few, and the ones I saw did not seem to reflect the way my collection physically exists.</p>
+
+        <p>I wanted to recreate each cooler with the correct number of shelves, rows, and columns, then place every bottle in its actual slot. When I chose a wine, I wanted the app to tell me exactly where to reach for it. That sounds like a small detail, but it was the detail that mattered most to me.</p>
+
+        <p>I also wanted to keep the useful parts of the spreadsheet while adding everything it was missing. I care about drinking windows, purchase prices, estimated values, tasting notes, and the history of a bottle. I want to know whether something has been opened with a Coravin, moved to another cooler, given away, or finally drunk.</p>
+
+        <p>Most importantly, I wanted the collection to feel enjoyable to manage. Wine is not warehouse inventory. The software should help me understand what I have and encourage me to drink it, not make every bottle feel like an asset being tracked through a supply chain. So I started building Sideways.</p>
+
+        <h2>Building for the collection I actually have</h2>
+
+        <p>The first version is deliberately personal. It supports multiple storage units because I have multiple storage units. A cooler can have its own shelves and positions because mine do. Bottles can be placed, moved, opened, accessed with a Coravin, consumed, gifted, or removed.</p>
+
+        <p>There is a dashboard showing the collection as a whole, including where the bottles are stored, which ones are approaching their drinking window, and which bottles are not currently assigned to a position.</p>
+
+        <p>Sideways takes a system that already works reasonably well and turns it into something easier to maintain, search, and enjoy. It is also the kind of software I most enjoy building. It begins with a problem from my own life, has a clear reason to exist, and can start small without feeling unfinished.</p>
+
+        <p>For now, Frederika and I are the intended users. The first real test will be importing our collection, putting every bottle in its proper place, and using the app when deciding what to open.</p>
+
+        <p>If it works well for us, perhaps it will eventually be useful to other people with overflowing wine coolers, ambitious spreadsheets, and a persistent inability to leave a good tasting room empty-handed. At the very least, the next time a few too many bottles follow us home, we will know exactly where we put them.</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Michael Camilleri</span>
+      <span>Built simply. Kept useful.</span>
+    </footer>
+  </main>
+</body>
+</html>
