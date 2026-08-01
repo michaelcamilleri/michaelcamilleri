@@ -852,6 +852,7 @@ a.tag:hover {
   .hero-card              { min-height: 560px; padding: 30px 24px; }
   .hero-card::before      { inset: 12px; border-radius: 20px; }
   .eyebrow                { align-items: flex-start; border-radius: 22px; font-size: 11px; line-height: 1.45; white-space: normal; }
+  .eyebrow .dot           { margin-top: 4px; }
   .stats                  { grid-template-columns: 1fr; }
   .contact,
   .footer                 { display: block; }
