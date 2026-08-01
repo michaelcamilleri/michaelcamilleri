@@ -50,7 +50,14 @@
     .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
     .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
     .article-body a:hover{text-decoration-color:var(--blue)}
-    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:72px;padding-top:28px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+    .footer-right{display:inline-flex;align-items:center;gap:6px}
+    .footer-linkedin{display:inline-flex;align-items:center;opacity:.6;transition:opacity 180ms ease}
+    .footer-linkedin:hover{opacity:1}
+    .theme-toggle{background:none;border:none;padding:2px;color:inherit;cursor:pointer;display:inline-flex;align-items:center;opacity:.7;transition:opacity 180ms ease}
+    .theme-toggle:hover{opacity:1}
+    .theme-toggle svg{display:block}
+    .theme-toggle .icon-sun{display:none}
     @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
     :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
@@ -61,13 +68,15 @@
     [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
     [data-theme="dark"] .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
     [data-theme="dark"] .article-body{color:#94a3b8}
+    [data-theme="dark"] .theme-toggle .icon-sun{display:block}
+    [data-theme="dark"] .theme-toggle .icon-moon{display:none}
     @media (max-width:620px){
       .page{width:min(100% - 28px,1120px);padding-top:16px}
       .nav-links{display:none}
       .nav{margin-bottom:28px}
       .article-body{font-size:17px}
       .footer{display:block}
-      .footer span:last-child{display:block;margin-top:8px}
+      .footer span:last-child{display:flex;align-items:center;gap:6px;margin-top:8px}
     }
   </style>
 </head>
@@ -157,8 +166,40 @@
 
     <footer class="footer">
       <span>© 2026 Michael Camilleri</span>
-      <span>Built simply. Kept useful.</span>
+      <span class="footer-right">
+        <a href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-linkedin">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.984V9h3.105v1.561h.044c.432-.82 1.49-1.684 3.066-1.684 3.279 0 3.884 2.158 3.884 4.966v6.609zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.554 13.019H3.782V9h3.109v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </span>
     </footer>
   </main>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const html = document.documentElement;
+      const updateLabel = () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      updateLabel();
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        updateLabel();
+      });
+    }
+  </script>
 </body>
 </html>
