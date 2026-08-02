@@ -25,6 +25,7 @@ Over 20 years of coding experience, with a soft spot for clean UI, clear communi
 ## What I'm Building
 
 - **[Field Eric](https://fielderic.com)** - Social football app for casual match organisation
+- **[Sideways](https://sideways.wine)** - Wine cellar app for knowing what you own, where it is, and when to drink it
 - **[Pages for Rentals](https://pagesforrentals.com)** - Property website builder for independent hosts who want direct bookings
 - **[MixologAI](https://mixologai.com)** - AI-assisted cocktail guides, bar notes, and visual recipes for classic drinks
 - **[Townsend Malta](https://townsendmalta.com)** - Short-term rental apartment in Mellieħa, Malta
