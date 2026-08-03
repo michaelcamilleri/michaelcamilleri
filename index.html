@@ -25,6 +25,34 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .project-card p {
+      max-width: calc(100% - 88px);
+    }
+
+    .project-card:nth-child(2)::before,
+    .project-card:nth-child(2)::after {
+      content: none;
+      display: none;
+    }
+
+    .project-card:nth-child(3)::before {
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+    }
+
+    .project-card:nth-child(3)::after {
+      background-size: 36px 36px;
+      background-image: url('/images/icon-house.svg');
+    }
+
+    .project-card:nth-child(4)::before {
+      background: linear-gradient(135deg, var(--green), var(--blue));
+    }
+
+    .project-card:nth-child(4)::after {
+      background-size: 28px 28px;
+      background-image: url('/images/icon-terminal.svg');
+    }
+
     .notes-list {
       grid-template-columns: 1fr;
       gap: 12px;
