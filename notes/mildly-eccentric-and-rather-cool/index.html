@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mildly eccentric and rather cool · Michael Camilleri</title>
+  <meta name="description" content="Watches, memory, status, and the small rituals that make collecting personal." />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
+  <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Mildly eccentric and rather cool" />
+  <meta property="og:description" content="Watches, memory, status, and the small rituals that make collecting personal." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/mildly-eccentric-and-rather-cool/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f8fafc; --paper:rgba(255,255,255,.88); --paper-strong:rgba(255,255,255,.96); --ink:#0f172a; --muted:#64748b; --line:rgba(15,23,42,.09); --blue:#2563eb; --blue-deep:#1e3a8a; --coral:#e8614a; --shadow:0 24px 80px rgba(15,23,42,.10); --radius:28px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 18%,rgba(37,99,235,.11),transparent 36rem),linear-gradient(150deg,#fdf9f7 0%,#f0f4ff 60%,#f5f8ff 100%);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .page{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:28px 0 48px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:48px;animation:rise 700ms ease both}
+    .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:-.04em}
+    .brand-name{display:inline-flex;gap:.08em;letter-spacing:-.045em;text-transform:lowercase;text-shadow:0 2px 14px rgba(15,23,42,.16)}
+    .brand-word{font-weight:500}.brand-word strong{font-weight:900}
+    .brand-word.dark{color:var(--blue-deep)}.brand-word.light{color:var(--blue);margin-left:-.08em}
+    .brand-word.light strong{display:inline-block;transform:translateX(-.015em)}
+    .mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(15,23,42,.12);border-radius:14px;background:var(--paper-strong);box-shadow:0 14px 42px rgba(15,23,42,.08);overflow:hidden}
+    .mark-letter{display:inline-block;font-size:20px;line-height:1;font-weight:800;letter-spacing:-.17em;transform:translateX(-1px)}
+    .mark-letter.dark{color:var(--blue-deep)}.mark-letter.light{color:var(--blue)}
+    .nav-links{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.58);backdrop-filter:blur(18px);box-shadow:0 14px 50px rgba(15,23,42,.08)}
+    .nav-links a{padding:10px 14px;border-radius:999px;color:#334155;font-size:14px;font-weight:700;transition:background 180ms ease,color 180ms ease,transform 180ms ease}
+    .nav-links a:hover{background:#fff;color:var(--ink);transform:translateY(-1px)}
+    .nav-links a+a{position:relative}
+    .nav-links a+a::before{content:"";position:absolute;left:-5px;top:50%;width:1px;height:18px;transform:translateY(-50%);background:rgba(15,23,42,.10);pointer-events:none;transition:opacity 180ms ease}
+    .nav-links a:hover::before{opacity:0}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:600;margin-bottom:40px;transition:color 180ms ease;animation:rise 700ms 60ms ease both}
+    .back-link:hover{color:var(--ink)}
+    .article{max-width:700px;margin:0 auto;animation:rise 700ms 100ms ease both}
+    .article-label{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:7px 12px;border:1px solid rgba(232,97,74,.2);border-radius:999px;background:rgba(232,97,74,.07);color:var(--coral);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .article h1{margin:0 0 14px;font-size:clamp(32px,5vw,52px);line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+    .article-meta{margin:0 0 40px;padding-bottom:36px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:500}
+    .article-body{font-size:18px;line-height:1.8;color:#334155;letter-spacing:-.01em}
+    .article-body p{margin:0 0 26px}
+    .article-body p:last-child{margin-bottom:0}
+    .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
+    .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
+    .article-body a:hover{text-decoration-color:var(--blue)}
+    .footer{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
+    .footer-right{display:inline-flex;align-items:center;gap:6px}
+    .footer-linkedin{display:inline-flex;align-items:center;opacity:.6;transition:opacity 180ms ease}
+    .footer-linkedin:hover{opacity:1}
+    .theme-toggle{background:none;border:none;padding:2px;color:inherit;cursor:pointer;display:inline-flex;align-items:center;opacity:.7;transition:opacity 180ms ease}
+    .theme-toggle:hover{opacity:1}
+    .theme-toggle svg{display:block}
+    .theme-toggle .icon-sun{display:none}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;transition-duration:1ms!important}}
+    :root[data-theme="dark"]{--paper:rgba(255,255,255,.07);--paper-strong:rgba(255,255,255,.12);--ink:#f1f5f9;--muted:#94a3b8;--line:rgba(255,255,255,.10);--blue:#60a5fa;--blue-deep:#93c5fd;--shadow:0 24px 80px rgba(0,0,0,.5)}
+    [data-theme="dark"] body{background:radial-gradient(circle at 15% 18%,rgba(59,130,246,.14),transparent 36rem),linear-gradient(150deg,#0c0f1a 0%,#0f172a 60%,#0c1520 100%)}
+    [data-theme="dark"] .nav-links{background:rgba(15,23,42,.7)}
+    [data-theme="dark"] .nav-links a{color:#94a3b8}
+    [data-theme="dark"] .nav-links a:hover{background:rgba(255,255,255,.08);color:#f1f5f9}
+    [data-theme="dark"] .nav-links a+a::before{background:rgba(255,255,255,.10)}
+    [data-theme="dark"] .article-label{border-color:rgba(232,97,74,.3);background:rgba(232,97,74,.1)}
+    [data-theme="dark"] .article-body{color:#94a3b8}
+    [data-theme="dark"] .theme-toggle .icon-sun{display:block}
+    [data-theme="dark"] .theme-toggle .icon-moon{display:none}
+    @media (max-width:620px){
+      .page{width:min(100% - 28px,1120px);padding-top:16px}
+      .nav-links{display:none}
+      .nav{margin-bottom:28px}
+      .article-body{font-size:17px}
+      .footer{display:block}
+      .footer span:last-child{display:flex;align-items:center;gap:6px;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../../" aria-label="Michael Camilleri home">
+        <span class="mark" aria-hidden="true"><span class="mark-letter dark">m</span><span class="mark-letter light">c</span></span>
+        <span class="brand-name"><span class="brand-word dark"><strong>m</strong>ichael</span><span class="brand-word light"><strong>c</strong>amilleri</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="../../#projects">Projects</a>
+        <a href="../../#notes">Notes</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <a href="../../#notes" class="back-link">← Notes</a>
+
+    <article class="article">
+      <div class="article-label">Watches</div>
+      <h1>Mildly eccentric and rather cool</h1>
+      <p class="article-meta">August 2026</p>
+
+      <div class="article-body">
+        <p>Nobody needs a mechanical watch. My phone tells the time more accurately, changes time zones by itself and never asks to be wound in the morning. A cheap quartz watch will outperform most mechanical ones at telling the time. Nobody needs more than one watch either, which makes owning a collection difficult to defend. I maintain that my collection is limited to ten, but one of the thirteen is an Apple Watch and two live in the tiny drawer beneath the watch case, where they do not look like part of the collection. This makes sense to me.</p>
+
+        <p>I remember talking about the Omega Speedmaster with a friend in Malta in 2007. I was living and working in Slovakia then, and the version in my head was on a brown leather strap. I liked watches, but I was not a collector, and the Speedmaster belonged to some indistinct future in which I might own a watch like that.</p>
+
+        <p>I did eventually buy an Omega, but not the Speedmaster. Frederika and I were choosing my wedding watch, and the Speedmaster was neither as formal nor as affordable as the Omega De Ville we chose together. The De Ville made sense for a wedding and for the life I had at the time. It still does. I have bought a few leather straps for it so that I can wear it with different outfits, and it remains the watch I reach for when I need something dressy. I do not wear it often enough, but every time I put it on I am briefly surprised by how good it looks and feels.</p>
+
+        <p>I sometimes think a Jaeger-LeCoultre Reverso could take its place as my dress watch. That is how collectors talk, as if every watch occupies a clearly defined position and a new one must justify itself by filling a vacancy. A Reverso might eventually take some of the De Ville's wrist time, but I would never sell the De Ville. It is my wedding watch, chosen with Frederika, so the position is not actually vacant. Somehow this does not stop me wanting the Reverso.</p>
+
+        <p>There were no watches passed down to me. My grandfather had an early 1980s Seiko, but my uncle took it when my grandfather died and my cousin has it now. That is completely fair. I inherited my grandfather's old camera instead, which made sense because I was deeply interested in photography and still am.</p>
+
+        <p>The obvious response was to find another example of his Seiko. My cousin sent me close-up photographs of the original, and I used them to compare the dial and small details against watches for sale. Good examples of that particular model are rare, so I set up an alert on Chrono24 and inspected every one that appeared. Eventually, a watch in France was listed in condition close to my grandfather's, and I bought it immediately.</p>
+
+        <p>It is not a particularly good watch. It does not hack — the seconds hand keeps moving while I set it — and setting the time is awkward. Those faults are part of why I love it. When I struggle with it, I am touching the same mechanism and feeling the same resistance my grandfather did whenever he set his watch. It is not his actual Seiko, but it gives me access to one tiny physical experience we can still share.</p>
+
+        <p>For years, the De Ville remained something I wore to weddings, anniversaries and other occasions that seemed important enough. Most days I wore nothing. The Apple Watch changed that because, for the first time, wearing a watch became an everyday habit, including when I was not exercising. Then the pandemic arrived, some friends created a WhatsApp group, and watches gradually became part of the conversation.</p>
+
+        <p>Around the same period, YouTube became dangerous. Teddy Baldassarre is particularly good at converting an interesting watch into one that begins to feel necessary. Then the MoonSwatch appeared. It offered an “Omega”, very much in quotation marks and very much a Swatch, for a few hundred dollars if I could find one.</p>
+
+        <p>There were no Swatch stores in Seattle. I tried the store in San Francisco during two separate visits and failed both times. Later, while flying back to Seattle from Malta, I found myself at Rome Fiumicino airport in front of a shop that happened to have every MoonSwatch available. After all that searching, I could suddenly choose any of them. I left with the Mission to Mercury.</p>
+
+        <p>The MoonSwatch revived my interest, but the Hamilton Khaki Field King I bought next made me a collector. Within a few months, I had bought two more watches from a local dealer and joined the waiting list for a Rolex. I could have paid less online, but I chose to pay a little more because the relationship mattered to me. By then, the hobby had become very good at converting appreciation into shopping.</p>
+
+        <p>The Rolex I wanted was a blue-dial Oyster Perpetual. I dislike the Cyclops lens over the date on other models, and the Oyster Perpetual was clean, simple and relatively understated. It was also one of the few Rolexes I could reasonably hope to get from the dealer within a year rather than several. I never imagined it as my everyday watch; that role already belonged to the Speedmaster I still did not own.</p>
+
+        <p>I love wearing it, but it makes me self-conscious in a way none of my other watches does. People cross their arms all the time. I cross mine too, except that when I am wearing the Rolex, I sometimes make sure my left wrist goes underneath the right. If I rest my arms on a table at dinner, I become aware of whether the watch is on full display. I am certain nobody cares, and nobody has ever criticized me for it. The entire judgment exists in my head: look at him making sure everyone can see his Rolex.</p>
+
+        <p>I am not uncomfortable owning an obvious luxury object. I would love a Rolex GMT-Master II with the red-and-blue Pepsi bezel, which is hardly a discreet choice, and I am not even sure I would try to hide that one. If you are wearing a Pepsi, you have to own it. What makes me uncomfortable is not being seen with a Rolex, but being mistaken for someone who needs other people to see it.</p>
+
+        <p>That distinction is not entirely mine to control. A Rolex is a status symbol whether I intend it to be or not. I have argued with friends who think status is the whole point of expensive watches, perhaps because I want my intention to matter more than it does. The truth is less tidy: I buy watches because I love them and they make me feel good, but other people may still see something different.</p>
+
+        <p>Sometimes I notice the weight of a watch on my wrist and it makes me happy. Sometimes I catch the dial in the light across the dinner table and half smile. I regularly look at a watch without registering the time at all, although occasionally I even use one to check it.</p>
+
+        <p>Mechanical watches appeal to me partly because of the engineering. I love a clear caseback and seeing the movement working, all those tiny parts producing an outcome that a phone achieves with vastly greater precision and no visible effort. I like that I supply the energy with my hand or simply by moving through the day. A battery makes a watch feel more like an electronic device, something that might eventually become obsolete, while a mechanical movement feels permanent.</p>
+
+        <p>This is not an argument I can defend too vigorously. Mechanical watches need servicing, cost more, and keep worse time. A good quartz watch can last for decades, and I would happily buy a quartz Cartier Tank because its history and beauty matter more to me than the movement inside it. I am not interested in mechanical purity. I am interested in the feeling of a small machine that can remain with me for a very long time, and in the stories that accumulate around it.</p>
+
+        <p>Until recently, I had never fully wound either of my manual watches. I had read that you should never overwind a mechanical watch, so I stopped as soon as the crown offered much resistance. The Sea-Gull is fairly stiff to wind and its crown turns back slightly, which always felt like a warning. With the Speedmaster, I had read that it took around forty turns, so forty became a hard limit: never forty-one, just in case. It turns out that a fully wound watch reaches an unmistakable hard stop. I had spent years trying not to overwind a watch and succeeded mainly in never fully winding one.</p>
+
+        <p>Even now, I can always find a design or feature that none of my watches quite covers. Calling each one a separate category sounds like discipline because it avoids duplication, but it is really just another way to justify buying a watch.</p>
+
+        <p>My supposed final watch is a Vacheron Constantin Overseas with a blue dial. It overlaps with the blue Rolex, so I could sell the Rolex and use the proceeds to make the ridiculous financial commitment to the Vacheron feel less ridiculous. This is collector mathematics, in which subtracting the value of a watch I already own turns an enormous expenditure into something approaching thrift.</p>
+
+        <p>The Vacheron has another hold on me. Its logo is the Maltese cross. I know the symbol has nothing to do with Malta, and I am not someone who thinks of himself as especially patriotic. Still, I have lived away for a long time while my family, old friends and the place Frederika and I eventually plan to return to remain there. The cross means more to me than it should. It also provides a suspiciously useful emotional justification for wanting a very expensive watch.</p>
+
+        <p>Perhaps that is what watches do. My Seiko was never my grandfather's, but it connects me to him. My Speedmaster never went to the Moon, but that history changes how it feels on my wrist, and I fully intend to take an embarrassing wrist photograph with it at Kennedy Space Center one day. The Vacheron cross is not Maltese in origin, but I see home in it anyway. The meaning is not embedded in the object at the factory. We add it ourselves.</p>
+
+        <p>For our tenth wedding anniversary, Frederika and I considered buying matching Cartier Tanks with matching engravings. It was a genuinely lovely idea, but the collector in me observed that I already owned a dress watch and did not dress formally very often. More importantly, Frederika knew I would still want the Speedmaster after buying the Tank. If we were spending that much money, she insisted that I buy the watch I actually wanted. She still bought her Tank, on a metal bracelet that lets her wear it dressed up or down, and it is gorgeous. Our watches do not match, but the decision does.</p>
+
+        <p>We might otherwise have marked our tenth anniversary with a major trip, perhaps Fiji or Tahiti. Gaston, our aging French bulldog, needs us close to home now, so travelling somewhere distant did not feel right. The watches became our anniversary splurge instead, permanent objects attached to a period when staying close to him mattered more than going far away.</p>
+
+        <p>I notice the Speedmaster throughout the day more than any other watch I own. The De Ville still feels dressy and the Rolex somehow still feels like a special-occasion watch, but the Speedmaster feels like a grown-up watch. I am 43 years old. I have been working in software for at least twenty years, have lived in several countries and have been married for a decade. I do not need a watch to tell me I am an adult, so admitting that it makes me feel grown-up sounds faintly absurd. The word I am trying to avoid may be accomplished.</p>
+
+        <p>I first wanted this watch in 2007, when I was about 24 and the life I have now was somewhere in the distance. The Speedmaster does not convince the present version of me that I have finally become an adult. It lets me see myself briefly through the eyes of the younger man who imagined what adulthood might feel like.</p>
+
+        <p>There is one final ritual, if it deserves that name. The Speedmaster's central chronograph hand normally rests at twelve, directly over the applied metal Omega logo. I prefer seeing the logo, so I start the chronograph, wait exactly thirty seconds, and stop the hand at six. It serves no horological purpose, and almost nobody would notice. I mentioned this during a conversation with ChatGPT about winding manual watches. It called the habit mildly eccentric and rather cool, and there was only ever going to be one title for this essay.</p>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Michael Camilleri</span>
+      <span class="footer-right">
+        <a href="https://www.linkedin.com/in/mcamilleri" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-linkedin">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.984V9h3.105v1.561h.044c.432-.82 1.49-1.684 3.066-1.684 3.279 0 3.884 2.158 3.884 4.966v6.609zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.554 13.019H3.782V9h3.109v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </span>
+    </footer>
+  </main>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const html = document.documentElement;
+      const updateLabel = () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      updateLabel();
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        updateLabel();
+      });
+    }
+  </script>
+</body>
+</html>
