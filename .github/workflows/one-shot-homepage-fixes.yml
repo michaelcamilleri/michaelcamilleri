@@ -1,0 +1,119 @@
+name: One-shot homepage fixes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-shot-homepage-fixes.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply-fixes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply homepage and note fixes
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace_once(text: str, old: str, new: str, label: str) -> str:
+              if old not in text:
+                  raise SystemExit(f"Expected text not found: {label}")
+              return text.replace(old, new, 1)
+
+          index_path = Path('index.html')
+          index = index_path.read_text()
+
+          project_classes = {
+              'https://fielderic.com/': 'project-field-eric',
+              'https://sideways.wine/': 'project-sideways',
+              'https://pagesforrentals.com/': 'project-pagesforrentals',
+              'https://implementeurs.com/': 'project-implementeurs',
+          }
+
+          for href, extra_class in project_classes.items():
+              pattern = rf'<a class="project-card reveal-item"([^>]*href="{re.escape(href)}")'
+              replacement = rf'<a class="project-card {extra_class} reveal-item"\1'
+              index, count = re.subn(pattern, replacement, index, count=1)
+              if count != 1:
+                  raise SystemExit(f"Could not assign class {extra_class}")
+
+          css_anchor = '''    .projects {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+'''
+          css_addition = '''    .projects {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    a.project-card.project-sideways::before,
+    a.project-card.project-sideways::after {
+      content: none;
+      display: none;
+    }
+
+    a.project-card.project-field-eric::after {
+      background-image: url('/images/icon-ball.svg');
+    }
+
+    a.project-card.project-pagesforrentals::before {
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+    }
+
+    a.project-card.project-pagesforrentals::after {
+      background-size: 36px 36px;
+      background-image: url('/images/icon-house.svg');
+    }
+
+    a.project-card.project-implementeurs::before {
+      background: linear-gradient(135deg, var(--green), var(--blue));
+    }
+
+    a.project-card.project-implementeurs::after {
+      background-size: 28px 28px;
+      background-image: url('/images/icon-terminal.svg');
+    }
+
+    .project-field-eric p,
+    .project-pagesforrentals p,
+    .project-implementeurs p {
+      max-width: calc(100% - 88px);
+    }
+'''
+          index = replace_once(index, css_anchor, css_addition, 'homepage project CSS anchor')
+          index_path.write_text(index)
+
+          note_updates = [
+              (
+                  Path('notes/mildly-eccentric-and-rather-cool/index.html'),
+                  '<div class="article-label">Watches</div>',
+                  '<div class="article-label">Watches</div><div class="article-label" style="margin-left:8px">Personal</div>',
+              ),
+              (
+                  Path('notes/two-overflowing-coolers-and-a-spreadsheet/index.html'),
+                  '<div class="article-label">Wine</div>',
+                  '<div class="article-label">Wine</div><div class="article-label" style="margin-left:8px">Software</div>',
+              ),
+          ]
+
+          for path, old, new in note_updates:
+              content = path.read_text()
+              content = replace_once(content, old, new, str(path))
+              path.write_text(content)
+          PY
+
+      - name: Commit changes and remove workflow
+        shell: bash
+        run: |
+          rm .github/workflows/one-shot-homepage-fixes.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html notes/mildly-eccentric-and-rather-cool/index.html notes/two-overflowing-coolers-and-a-spreadsheet/index.html .github/workflows/one-shot-homepage-fixes.yml
+          git commit -m "Sync note tags and project card artwork"
+          git push
