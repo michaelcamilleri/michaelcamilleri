@@ -1,2 +1,14 @@
 @import url('/style-original.css');
-@import url('/style-override.css');
+
+/* Sideways project icon override */
+.project-card:nth-child(2)::before {
+  content: "" !important;
+  display: block !important;
+}
+
+.project-card:nth-child(2)::after {
+  content: "" !important;
+  display: block !important;
+  background-size: 32px 32px !important;
+  background-image: url('/images/icon-wine.svg') !important;
+}
