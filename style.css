@@ -12,3 +12,10 @@
   background-size: 32px 32px !important;
   background-image: url('/images/icon-wine.svg') !important;
 }
+
+/* Keep the two hero columns aligned without stretching the right-hand stack. */
+@media (min-width: 881px) {
+  .hero-card {
+    padding-bottom: 44px;
+  }
+}
