@@ -21,14 +21,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <style>
+    .projects {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .notes-list {
       grid-template-columns: 1fr;
       gap: 12px;
     }
 
-    .note-card {
+    a.note-card {
       min-height: 0;
-      padding: 18px 24px;
+      padding: 16px 24px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       grid-template-areas:
@@ -42,7 +46,7 @@
 
     .note-card-top {
       grid-area: meta;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
     }
 
     .note-card h3 {
@@ -64,10 +68,22 @@
       white-space: nowrap;
     }
 
+    .note-card .tag {
+      padding: 5px 9px;
+      font-size: 11px;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 880px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 640px) {
-      .note-card {
+      a.note-card {
         display: block;
-        padding: 20px;
+        padding: 18px 20px;
       }
 
       .note-card-top {
@@ -84,7 +100,7 @@
 
       .note-read {
         display: inline-flex;
-        margin-top: 18px;
+        margin-top: 14px;
       }
     }
   </style>
@@ -166,12 +182,17 @@
           <p>A social football app for organizers who need a few more players and players who want a casual match.</p>
           <span>Visit fielderic.com</span>
         </a>
-        <a class="project-card reveal-item" style="--reveal-delay: 140ms" href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer">
+        <a class="project-card reveal-item" style="--reveal-delay: 120ms" href="https://sideways.wine/" target="_blank" rel="noopener noreferrer">
+          <h3>Sideways</h3>
+          <p>A personal wine cellar app for keeping track of bottles, storage, tasting notes, and what to drink next.</p>
+          <span>Visit sideways.wine</span>
+        </a>
+        <a class="project-card reveal-item" style="--reveal-delay: 180ms" href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer">
           <h3><span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></h3>
           <p>Elegant property websites for hosts who want more trust, more control, and more direct bookings.</p>
           <span>Visit pagesforrentals.com</span>
         </a>
-        <a class="project-card reveal-item" style="--reveal-delay: 220ms" href="https://implementeurs.com/" target="_blank" rel="noopener noreferrer">
+        <a class="project-card reveal-item" style="--reveal-delay: 240ms" href="https://implementeurs.com/" target="_blank" rel="noopener noreferrer">
           <h3>Implementeurs</h3>
           <p>The little software umbrella for experiments, web products, and useful things that deserve to exist.</p>
           <span>Visit implementeurs.com</span>
