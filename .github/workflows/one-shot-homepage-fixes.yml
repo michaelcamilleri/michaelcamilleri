@@ -1,20 +1,20 @@
 name: One-shot homepage fixes
 
 on:
-  push:
+  pull_request:
     branches: [main]
-    paths:
-      - '.github/workflows/one-shot-homepage-fixes.yml'
-  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   apply-fixes:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Apply homepage and note fixes
         shell: bash
@@ -109,12 +109,12 @@ jobs:
               path.write_text(content)
           PY
 
-      - name: Commit changes and remove workflow
+      - name: Commit fixes to the pull request branch
         shell: bash
         run: |
-          rm .github/workflows/one-shot-homepage-fixes.yml
+          rm -f .github/workflows/one-shot-homepage-fixes.yml .trigger-homepage-fixes
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html notes/mildly-eccentric-and-rather-cool/index.html notes/two-overflowing-coolers-and-a-spreadsheet/index.html .github/workflows/one-shot-homepage-fixes.yml
-          git commit -m "Sync note tags and project card artwork"
-          git push
+          git add index.html notes/mildly-eccentric-and-rather-cool/index.html notes/two-overflowing-coolers-and-a-spreadsheet/index.html .github/workflows/one-shot-homepage-fixes.yml .trigger-homepage-fixes
+          git commit -m "Sync note tags and project card artwork [skip ci]"
+          git push origin HEAD:${{ github.head_ref }}
