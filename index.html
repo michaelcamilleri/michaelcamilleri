@@ -20,6 +20,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
+  <style>
+    .notes-list {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .note-card {
+      min-height: 0;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas:
+        "meta meta"
+        "title read"
+        "description read";
+      column-gap: 28px;
+      row-gap: 8px;
+      align-items: center;
+    }
+
+    .note-card-top {
+      grid-area: meta;
+      margin: 0;
+    }
+
+    .note-card h3 {
+      grid-area: title;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .note-card p {
+      grid-area: description;
+      max-width: none;
+      margin: 0;
+    }
+
+    .note-read {
+      grid-area: read;
+      align-self: center;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      .note-card {
+        display: block;
+        padding: 20px;
+      }
+
+      .note-card h3 {
+        margin-top: 14px;
+      }
+
+      .note-card p {
+        margin-top: 10px;
+      }
+
+      .note-read {
+        display: inline-flex;
+        margin-top: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="page">
@@ -116,7 +179,19 @@
         <h2 id="notes-title">Notes.</h2>
       </div>
       <div class="notes-list">
-        <a href="notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card reveal-item" style="--reveal-delay: 60ms">
+        <a href="notes/mildly-eccentric-and-rather-cool/" class="note-card reveal-item" style="--reveal-delay: 60ms">
+          <div class="note-card-top">
+            <span style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="tag">Watches</span>
+              <span class="tag">Personal</span>
+            </span>
+            <span class="note-date">August 2026</span>
+          </div>
+          <h3>Mildly eccentric and rather cool</h3>
+          <p>How I ended up collecting mechanical watches, and why the ones that matter most are rarely the most expensive.</p>
+          <span class="note-read">Read note →</span>
+        </a>
+        <a href="notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card reveal-item" style="--reveal-delay: 120ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Wine</span>
@@ -128,7 +203,7 @@
           <p>How a growing wine collection turned a useful Google Sheet into a small piece of software.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/when-ai-becomes-a-workflow/" class="note-card reveal-item" style="--reveal-delay: 140ms">
+        <a href="notes/when-ai-becomes-a-workflow/" class="note-card reveal-item" style="--reveal-delay: 180ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">AI</span>
@@ -140,7 +215,7 @@
           <p>A cocktail project, a custom content tool, and the AI-assisted loop that made it possible.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 220ms">
+        <a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 240ms">
           <div class="note-card-top">
             <span class="tag">Football</span>
             <span class="note-date">June 2026</span>
