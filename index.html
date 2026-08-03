@@ -28,26 +28,26 @@
 
     .note-card {
       min-height: 0;
-      padding: 20px 24px;
+      padding: 18px 24px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       grid-template-areas:
         "meta meta"
-        "title read"
+        "title title"
         "description read";
       column-gap: 28px;
-      row-gap: 8px;
+      row-gap: 0;
       align-items: center;
     }
 
     .note-card-top {
       grid-area: meta;
-      margin: 0;
+      margin: 0 0 10px;
     }
 
     .note-card h3 {
       grid-area: title;
-      margin: 0;
+      margin: 0 0 6px;
       font-size: 22px;
     }
 
@@ -60,6 +60,7 @@
     .note-read {
       grid-area: read;
       align-self: center;
+      margin: 0;
       white-space: nowrap;
     }
 
@@ -69,8 +70,12 @@
         padding: 20px;
       }
 
+      .note-card-top {
+        margin-bottom: 14px;
+      }
+
       .note-card h3 {
-        margin-top: 14px;
+        margin: 0;
       }
 
       .note-card p {
