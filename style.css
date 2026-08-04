@@ -19,3 +19,36 @@
     padding-bottom: 44px;
   }
 }
+
+/* Invert the closing contact card so it stands apart in both themes. */
+[data-theme="dark"] .contact {
+  background: rgba(248, 250, 252, .96);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, .12);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .28);
+}
+
+[data-theme="dark"] .contact span {
+  color: rgba(15, 23, 42, .68);
+}
+
+[data-theme="dark"] .contact-email {
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, .28);
+}
+
+[data-theme="dark"] .contact-email:hover {
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, .7);
+}
+
+[data-theme="dark"] .copy-email {
+  color: #0f172a;
+  background: rgba(15, 23, 42, .04);
+  border-color: rgba(15, 23, 42, .16);
+}
+
+[data-theme="dark"] .copy-email:hover {
+  background: rgba(15, 23, 42, .1);
+  border-color: rgba(15, 23, 42, .28);
+}
