@@ -133,7 +133,9 @@
 
         <p>I am not uncomfortable owning an obvious luxury object. I would love a Rolex GMT-Master II with the red-and-blue Pepsi bezel, which is hardly a discreet choice, and I am not even sure I would try to hide that one. If you are wearing a Pepsi, you have to own it. What makes me uncomfortable is not being seen with a Rolex, but being mistaken for someone who needs other people to see it.</p>
 
-        <p>That distinction is not entirely mine to control. A Rolex is a status symbol whether I intend it to be or not. I have argued with friends who think status is the whole point of expensive watches, perhaps because I want my intention to matter more than it does. The truth is less tidy: I buy watches because I love them and they make me feel good, but other people may still see something different.</p>
+        <p>That distinction is not entirely mine to control. A Rolex is a status symbol whether I intend it to be or not. I once argued with a friend who said he could buy a replica for about a thousand dollars, so convincing that a jeweller would need to open the case to tell it was fake. Whether that is true is beside the point. His argument was that nobody would know. Mine was that I would.</p>
+
+        <p>Every time I put it on, and every time I looked at it, I would know I was wearing a fake. If the point were to persuade other people that I owned a Rolex, perhaps it would work. But watches give me pleasure mostly when nobody else is paying attention. A replica could reproduce the appearance, but not that feeling. The truth is still less tidy: I wear watches because I love them and they make me feel good, but other people may still see something different.</p>
 
         <p>Sometimes I notice the weight of a watch on my wrist and it makes me happy. Sometimes I catch the dial in the light across the dinner table and half smile. I regularly look at a watch without registering the time at all, although occasionally I even use one to check it.</p>
 
@@ -195,7 +197,7 @@
       themeToggle.addEventListener('click', () => {
         const isDark = html.getAttribute('data-theme') === 'dark';
         if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        else { html.setAttribute('data-theme','dark'); localStorage.setItem('theme', 'dark'); }
         updateLabel();
       });
     }
