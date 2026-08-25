@@ -233,7 +233,19 @@
         <h2 id="notes-title">Notes.</h2>
       </div>
       <div class="notes-list">
-        <a href="notes/mildly-eccentric-and-rather-cool/" class="note-card reveal-item" style="--reveal-delay: 60ms">
+        <a href="notes/have-dog-will-travel/" class="note-card reveal-item" style="--reveal-delay: 60ms">
+          <div class="note-card-top">
+            <span style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="tag">Travel</span>
+              <span class="tag">Personal</span>
+            </span>
+            <span class="note-date">August 2026</span>
+          </div>
+          <h3>Have dog, will travel</h3>
+          <p>Ten countries, complicated journeys, and how travelling with Gaston went from a choice to simply how we travel.</p>
+          <span class="note-read">Read note →</span>
+        </a>
+        <a href="notes/mildly-eccentric-and-rather-cool/" class="note-card reveal-item" style="--reveal-delay: 120ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Watches</span>
@@ -245,7 +257,7 @@
           <p>How I ended up collecting mechanical watches, and why the ones that matter most are rarely the most expensive.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card reveal-item" style="--reveal-delay: 120ms">
+        <a href="notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card reveal-item" style="--reveal-delay: 180ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Wine</span>
@@ -257,7 +269,7 @@
           <p>How a growing wine collection turned a useful Google Sheet into a small piece of software.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/when-ai-becomes-a-workflow/" class="note-card reveal-item" style="--reveal-delay: 180ms">
+        <a href="notes/when-ai-becomes-a-workflow/" class="note-card reveal-item" style="--reveal-delay: 240ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">AI</span>
@@ -269,7 +281,7 @@
           <p>A cocktail project, a custom content tool, and the AI-assisted loop that made it possible.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 240ms">
+        <a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 300ms">
           <div class="note-card-top">
             <span class="tag">Football</span>
             <span class="note-date">June 2026</span>
@@ -278,7 +290,7 @@
           <p>A personal note on Field Eric, a small football app I've kept coming back to for years.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/pagesforrentals/" class="note-card reveal-item" style="--reveal-delay: 300ms">
+        <a href="notes/pagesforrentals/" class="note-card reveal-item" style="--reveal-delay: 360ms">
           <div class="note-card-top">
             <span class="tag">Rentals</span>
             <span class="note-date">June 2026</span>
@@ -336,7 +348,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.16 });
