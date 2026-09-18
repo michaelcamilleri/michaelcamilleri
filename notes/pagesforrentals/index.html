@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The quiet calendar behind PagesForRentals · Michael Camilleri</title>
-  <meta name="description" content="A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling. How PagesForRentals started." />
+  <title>Two apartments and an empty calendar · Michael Camilleri</title>
+  <meta name="description" content="How a quiet rental calendar in Malta and a second apartment in Košice turned into PagesforRentals." />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
   <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
   <link rel="shortcut icon" href="../../favicon.svg" type="image/svg+xml" />
-  <meta property="og:title" content="The quiet calendar behind PagesForRentals" />
-  <meta property="og:description" content="A rental in Malta, a quiet winter calendar, and the parts of the business worth controlling. How PagesForRentals started." />
+  <meta property="og:title" content="Two apartments and an empty calendar" />
+  <meta property="og:description" content="How a quiet rental calendar in Malta and a second apartment in Košice turned into PagesforRentals." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://michaelcamilleri.net/notes/pagesforrentals/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,6 +50,7 @@
     .article-body h2{margin:44px 0 14px;font-size:22px;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1.2}
     .article-body a{color:var(--blue);text-decoration:underline;text-decoration-color:rgba(37,99,235,.3);text-underline-offset:3px;transition:text-decoration-color 180ms ease}
     .article-body a:hover{text-decoration-color:var(--blue)}
+    .pfr-name .pfr-em{font-weight:600}.pfr-name .pfr-for{font-weight:400}
     .footer{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:#64748b;font-size:13px}
     .footer-right{display:inline-flex;align-items:center;gap:6px}
     .footer-linkedin{display:inline-flex;align-items:center;opacity:.6;transition:opacity 180ms ease}
@@ -101,47 +102,49 @@
         <div class="article-label" style="margin-bottom:0">Rentals</div>
         <div class="article-label" style="margin-bottom:0">Software</div>
       </div>
-      <h1>The quiet calendar behind <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></h1>
+      <h1>Two apartments and an empty calendar</h1>
       <p class="article-meta">June 2026</p>
 
       <div class="article-body">
-        <p><span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> started with a quiet calendar. Last summer, our apartment in Malta began well: we had bookings, good feedback, and the early signs that the place could work as a short-term rental. Then the calendar went quiet, and from October to February we had no bookings at all. That was enough to make me look more closely at which parts of the business were actually ours to change.</p>
+        <p>Last summer, our apartment in Malta started well. We had bookings, good feedback and the early signs that this might actually work. Then things slowed down, and by February the calendar had been quiet for several months.</p>
 
-        <p>Seasonality was not going away, Airbnb's algorithm was beyond me, and I obviously could not make someone choose Mellieħa over another town. What I could change was how the apartment showed up online. We have a property manager because we are not in Malta day to day, and someone local needs to handle guests, cleaning, check-ins, and all the practical details that make a stay work. That arrangement makes sense, but it also means we cannot easily change how the apartment presents itself on Airbnb or Booking.</p>
+        <p>There were plenty of things I couldn't do much about. Seasonality was not going away, Airbnb's algorithm was beyond me, and I obviously couldn't convince someone who wanted to stay in Valletta that Mellieħa was really what they were looking for.</p>
 
-        <h2>The parts we could own</h2>
+        <p>But I could make the apartment look better online.</p>
 
-        <p>In hindsight, that limited how quickly we could react, but it also pushed me towards building the parts we could own. A direct website felt like the obvious place to start. I never expected it to replace Airbnb or Booking; the point was to give the apartment a home of its own, with clearer photos, better information, a bit more personality, and somewhere it could show up outside the usual platform search results.</p>
+        <p>We have a property manager because we're not in Malta day to day, and someone local needs to handle guests, cleaning, check-ins and all the practical details that make a stay work. That arrangement makes perfect sense, but it also means we can't easily change how the apartment presents itself on Airbnb or Booking whenever we feel like it.</p>
 
-        <p>Once that existed, it was natural to think about what happened after someone booked as well. The website did not have to stop being useful at the point where a reservation was made.</p>
+        <p>So I did the fairly predictable software-engineer thing and built a website. I never expected it to replace Airbnb or Booking; the idea was simply to give the apartment a home of its own, with better photos, clearer information, a little more personality and somewhere it could exist outside the usual platform search results.</p>
 
-        <h2>A page for the stay itself</h2>
+        <p>Once the website existed, I started thinking about what happened after someone booked as well. There was no reason for it to stop being useful the moment a reservation was made.</p>
 
-        <p>Because we are not there in person, and because guests usually communicate through the property manager, I wanted a simple way for them to find practical information without digging through a printed folder or waiting for a reply. A link in the welcome email made more sense than a binder on a table, so I built a guest page with the things people are likely to need during a stay: WiFi, check-in notes, house rules, local information, emergency details, and a few recommendations nearby. Nothing elaborate, just one useful place for the small questions that inevitably come up.</p>
+        <p>Because we're not there in person, and guests usually communicate through the property manager, I wanted somewhere they could find the boring but important stuff without digging through a printed folder or waiting for somebody to reply to a message: WiFi details, check-in information, house rules, emergency contacts and a few recommendations nearby.</p>
 
-        <h2>A way back for returning guests</h2>
+        <p>A link in the welcome email seemed considerably more useful than a binder sitting on a table, so I added a guest page where all of that could live in one place.</p>
 
-        <p>The direct site matters after checkout too. I kept thinking about repeat guests: on Airbnb we are one listing among hundreds, while on our own site the apartment has a name, a place to return to, and a direct enquiry path for someone who already knows they liked it. That can work better for us and for the guest. If someone comes back directly, we save platform fees and can share some of that saving with them, which makes the site a small part of the business rather than just a brochure.</p>
+        <p>The website also gave us something we hadn't really had before: somewhere for people to come back to. On Airbnb we're one listing among hundreds. If somebody stays with us, likes the apartment and decides to return a year later, I'd rather they remember the place than have to rediscover us somewhere in Airbnb's search results.</p>
 
-        <h2>A second rental made the pattern obvious</h2>
+        <p>A direct booking can work better for both sides too. We save the platform fees and can share some of that saving with the guest. At that point the website stops being just a nicer brochure and becomes a small but useful part of running the rental.</p>
 
-        <p>Around the same time, Košice Central was coming together: a small apartment in the old town of Košice, in a very different market but with much the same basic need. It needed a clean, trustworthy home online that was not simply another platform listing, and it needed the same sort of guest page because the practical problem was familiar. Guests still need clear information, and hosts still end up answering the same questions over and over again.</p>
+        <p>Around the same time, we were getting another apartment ready: Košice Central, a small place in the old town of Košice. It was a different city, in a different country, with a different market, but it needed much the same thing: a clean, trustworthy website that wasn't simply another platform listing, practical information for guests, and somewhere to answer the same handful of questions that inevitably come up.</p>
 
-        <p>Thinking about both properties made the pattern much easier to see. Independent rentals do not only need a nice landing page; they benefit from a small web presence around the whole stay, from the point someone first discovers the property through to the practical details after booking and, ideally, a way to find it again later.</p>
+        <p>At some point I realised I was basically building the same thing twice. That was probably when <span class="pfr-name"><span class="pfr-em">Pages</span><span class="pfr-for">for</span><span class="pfr-em">Rentals</span></span> became an idea rather than just some code I'd written for our own apartments.</p>
 
-        <h2>Naming the place properly</h2>
+        <p>Košice Central also made another problem rather obvious: our Malta apartment had a terrible name. "Malta Luxury Apartment" described it, technically, but it didn't really feel like a name. It sounded more like a placeholder we'd never got around to replacing.</p>
 
-        <p>Košice Central also made me think differently about naming. The name is simple, but it feels like a place: specific, memorable, and easy to point someone towards. Next to it, <i>Malta Luxury Apartment</i> started to feel generic. It described the property well enough, but it did not give it much identity.</p>
+        <p>Košice Central was simple, but at least it felt like somewhere. You could remember it. You could tell someone where you'd stayed. The name, the website and the guest information all belonged to the same place.</p>
 
-        <p>That eventually led to <i>Town's End Malta</i>. I wanted both rentals to have a stronger presence of their own rather than existing mainly as pages on Airbnb or Booking, and Košice Central had already shown me how much more coherent that feels when the name, website, and guest information all belong to the same place.</p>
+        <p>So Malta Luxury Apartment eventually became Town's End Malta.</p>
 
-        <h2>What <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> is for</h2>
+        <p>By then the pattern was fairly difficult to ignore. I'd built a website for one rental, built essentially the same thing for another, added guest pages because they were useful, and given both properties somewhere online that actually belonged to them.</p>
 
-        <p>That is where <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span> came from. It was not a big product idea or something I arrived at through a pitch deck; I was trying to solve our own problem carefully, and eventually realised that the same shape kept appearing in both rentals.</p>
+        <p>I hadn't set out to build a product. There was no pitch deck and no grand plan. I was trying to solve our own problem and eventually realised that the same problem probably wasn't particularly unique.</p>
 
-        <p>The idea is fairly simple. An independent rental should have somewhere of its own to be found and understood, somewhere useful for guests once they have booked, and a place they can remember if they want to come back. That is what I'm trying to build with <span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span>: simple, useful websites for independent rentals that deserve a little more than a listing on someone else's platform.</p>
+        <p>That's where <span class="pfr-name"><span class="pfr-em">Pages</span><span class="pfr-for">for</span><span class="pfr-em">Rentals</span></span> came from. The idea is deliberately simple: give an independent rental a proper home online, somewhere people can discover it and understand what they're booking, somewhere useful after they've booked, and somewhere they can remember if they want to come back.</p>
 
-        <p><a href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer"><span style="font-weight:800">Pages</span><span style="font-weight:300">for</span><span style="font-weight:800">Rentals</span></a> is live now, as are the two rental sites that shaped it: <a href="https://townsendmalta.com/" target="_blank" rel="noopener noreferrer">Town's End Malta</a> and <a href="https://kosicecentral.com/" target="_blank" rel="noopener noreferrer">Košice Central</a>. Together they are a pretty good example of the idea: a direct home for the rental, useful information for guests, and a clearer way for people to come back.</p>
+        <p><a href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer"><span class="pfr-name"><span class="pfr-em">Pages</span><span class="pfr-for">for</span><span class="pfr-em">Rentals</span></span></a> is live now, as are the two apartments that accidentally produced it: <a href="https://townsendmalta.com/" target="_blank" rel="noopener noreferrer">Town's End Malta</a> and <a href="https://kosicecentral.com/" target="_blank" rel="noopener noreferrer">Košice Central</a>.</p>
+
+        <p>Which is a slightly more elaborate outcome than I expected from wondering why nobody was booking our apartment in February.</p>
       </div>
     </article>
 
