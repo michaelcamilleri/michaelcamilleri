@@ -105,49 +105,43 @@
       <p class="article-meta">June 2026</p>
 
       <div class="article-body">
-        <p>I have been coming back to Field Eric for something like fourteen or fifteen years, which sounds slightly ridiculous because the thing itself is so simple.</p>
+        <p>I have been coming back to Field Eric for something like fourteen or fifteen years, which sounds slightly ridiculous because the idea behind it is so simple.</p>
 
-        <p>Field Eric is a social football app for people who organize casual matches and need a few more players, and for players who would happily join a game if they knew one was happening. Someone has booked a pitch. The match is tonight. They are three players short. A few WhatsApp groups get messaged. Someone asks a cousin. Someone says "I'll let you know" and then disappears. At some point, the organizer either finds enough people or the match becomes awkward.</p>
+        <p>It originally came out of conversations with friends while I was living in London in 2011. The detail that stuck with me was Kros’ Monday morning panic to find enough players for the weekly Għ. F. Fondgħadir match back in Malta. Someone had booked a pitch, the match was happening that evening, and they were usually a few players short.</p>
 
-        <p>This is not a world-changing problem. It is not trying to be. But it is a real problem, and I have always liked software that starts there.</p>
+        <p>Then came the usual scramble: a few WhatsApp messages, someone asking a cousin, someone else saying “I’ll let you know” and then disappearing. Eventually they either found enough people or played with whoever turned up.</p>
 
-        <h2>The match that stuck</h2>
+        <p>The obvious idea was to make it easier for the person organising the match to find people who wanted to play.</p>
 
-        <p>Field Eric originally came out of conversations with friends while I was living in London in 2012. The detail that stayed with me was Kros’ Monday morning panic to find players for the weekly Għ. F. Fondgħadir match back in Malta. It sounded funny at first, but the problem was real and familiar: someone had a pitch, a time, and a few players missing.</p>
+        <p>We tried building Field Eric back then, in the era when every small web app seemed to involve Facebook login, Rails and a lot of optimism. We built some of it, had far too many ideas for what it might eventually become and, like a huge number of side projects, never quite finished it.</p>
 
-        <p>That ordinary problem is what stayed with me.</p>
+        <p>The annoying thing was that the idea never really went away.</p>
 
-        <p>We tried building Field Eric back then, in the era when every small web app seemed to involve Facebook login, Rails, and a lot of optimism. It had some nice ideas. It also had the usual problems of side projects: too much scope, not enough time, and a product that was probably trying to be too many things before it had proved it could do one thing well.</p>
+        <p>I moved countries, changed jobs and worked on plenty of other things, but every so often Field Eric would come back. The problem hadn't disappeared either. People were still organising matches through WhatsApp and Facebook, still trying to work out who was actually coming and still looking for one or two extra players at the last minute.</p>
 
-        <h2>Why it kept coming back</h2>
+        <p>So eventually I opened the idea again.</p>
 
-        <p>Over the years, through moving countries, changing jobs, and watching the web change around it, the idea kept coming back. Part of the reason is that it still feels useful. Casual football has not gone away. The tools around it are still messy. WhatsApp groups are great until they are not. Facebook groups are useful, but they are not built around the actual flow of organizing a match. A person looking for a game and a person short of players should be easier to connect.</p>
+        <p>This time I deliberately started smaller. An organiser can create a match, say where and when it is happening and how many players are needed. Players can find upcoming matches and join them. The organiser can see who is coming and keep track of the numbers without having to reconstruct the entire match from a WhatsApp thread.</p>
 
-        <p>So I started rebuilding it.</p>
+        <p>The first version is focused on Malta, partly because that is where the original idea came from and partly because Malta is small enough that a product like this has a reasonable chance of finding its first group of people.</p>
 
-        <h2>Starting smaller this time</h2>
+        <p>Rebuilding it this time was also very different because the tools had changed.</p>
 
-        <p>The current version of Field Eric is intentionally small. An organizer can create a match. Players can see upcoming matches and ask to join. The organizer can manage requests. The first version is aimed at Malta, because that is where the original problem came from, and because Malta is small enough that something like this could actually find its first community.</p>
-
-        <p>The ambition, though, is not limited to Malta. The same problem exists anywhere people play casual football. It could be five-a-side in Sliema, seven-a-side in London, or a Sunday game somewhere else entirely. If the core loop works, the geography can change later.</p>
-
-        <h2>What AI changed</h2>
-
-        <p>Rebuilding it this time also felt different from the first attempt, mostly because the tools are different now. I do not think this version would exist without AI. Not because AI "built it for me." That is not what happened, and I do not find that framing especially useful. Software still needs taste. It needs decisions. It needs someone to care about what should be included, what should be left out, and what the thing is actually for.</p>
-
-        <p>But AI has changed the distance between idea and product.</p>
+        <p>I don't think this version of Field Eric would exist without AI. Not because AI built it for me, but because it removed enough friction for a side project to keep moving. There were still plenty of decisions to make, plenty of code to understand and plenty of occasions where something that looked straightforward turned into an evening of figuring out why it wasn't.</p>
 
         <p>Someone recently asked me how long a list of bug fixes and feature requests would have taken me without AI. It is a fair question, but I think it slightly misses the point. The more important question is not whether a full Saturday of work would otherwise have taken two weekends, or a month, or longer. The important thing is that it happened at all.</p>
 
-        <p>That is the difference this time. Field Eric sat unfinished for fourteen years. With AI in the loop, it became a working MVP in about two months. Not because the hard parts disappeared, but because the friction got low enough that momentum survived.</p>
+        <p>Field Eric sat unfinished in various forms for about fourteen years. With AI in the loop, it became a working MVP in about two months. Not because the hard parts disappeared, but because the friction got low enough that momentum survived.</p>
 
-        <p>You no longer need to be excellent at every layer of the stack at the same time. You do not have to be a backend specialist, database designer, DevOps engineer, frontend developer, UI designer, copywriter, tester, and product manager before you can make meaningful progress. You still need to understand enough to make good calls, and you still need to do the work. But the work moves faster.</p>
+        <p>You no longer need to be excellent at every layer of the stack at the same time. You do not have to be a backend specialist, database designer, DevOps engineer, frontend developer, UI designer, copywriter, tester and product manager before you can make meaningful progress. You still need to understand enough to make good calls, and you still need to do the work. But the work moves faster.</p>
+
+        <p>It also made it much easier to keep the scope under control. Instead of trying to build everything Field Eric might one day become, I could keep asking a much simpler question: what does the person organising a football match actually need right now? Mostly, they need enough players.</p>
 
         <p>For a side project like Field Eric, that matters. It means an idea that used to stay in a notebook, or in an old repository, or in a conversation with friends, can become something testable. Not perfect. Not finished. But real enough to put in front of people.</p>
 
-        <p>That is where Field Eric is now. I am hoping to launch soon, and I am starting by testing it with organizers in Malta. The goal is not to arrive with a grand platform and expect people to care. The goal is to find a few people who already organize casual football, understand how they do it, and see whether Field Eric can make one part of that job easier.</p>
+        <p>That is where Field Eric is now. I am hoping to launch soon, and I am starting by testing it with organisers in Malta. The goal is not to arrive with a grand platform and expect people to care. The goal is to find a few people who already organise casual football, understand how they do it, and see whether Field Eric can make one part of that job easier.</p>
 
-        <p>If you know someone who organizes casual football in Malta, please send them to <a href="https://fielderic.com/" target="_blank" rel="noopener noreferrer">Field Eric</a>. And if you are based in Malta and would like to help seed it locally, test it with real organizers, or just tell me why it will or will not work, I would <a href="../../#contact">love to hear from you</a>.</p>
+        <p>If you know someone who organises casual football in Malta, please send them to <a href="https://fielderic.com/" target="_blank" rel="noopener noreferrer">Field Eric</a>. And if you are based in Malta and would like to help seed it locally, test it with real organisers, or just tell me why it will or will not work, I would <a href="../../#contact">love to hear from you</a>.</p>
 
         <p>Small software. Clear job. Help a match happen.</p>
       </div>
