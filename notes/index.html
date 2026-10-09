@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Michael Camilleri</title>
-  <meta name="description" content="Michael Camilleri is a Maltese software engineer based in Seattle, building useful little things for the web." />
+  <title>Notes · Michael Camilleri</title>
+  <meta name="description" content="Notes on software, football, wine, travel, and whatever else is worth writing down." />
   <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0c0f1a" media="(prefers-color-scheme: dark)" />
   <script>const t=localStorage.getItem('theme');const sys=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(t===null&&sys))document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta property="og:title" content="Michael Camilleri · Maltese Software Engineer in Seattle" />
-  <meta property="og:description" content="Maltese software engineer based in Seattle. Payments software by day, practical internet projects by night. Football, wine, rentals, and simple tools that just work." />
+  <meta property="og:title" content="Notes · Michael Camilleri" />
+  <meta property="og:description" content="Notes on software, football, wine, travel, and whatever else is worth writing down." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://michaelcamilleri.net/" />
+  <meta property="og:url" content="https://michaelcamilleri.net/notes/" />
   <meta property="og:image" content="https://michaelcamilleri.net/images/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,121 +20,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
+  <link rel="canonical" href="https://michaelcamilleri.net/notes/" />
   <style>
-    .projects {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .project-card p {
-      max-width: calc(100% - 88px);
-    }
-
-    .project-card:nth-child(2)::before,
-    .project-card:nth-child(2)::after {
-      content: none;
-      display: none;
-    }
-
-    .project-card:nth-child(3)::before {
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-    }
-
-    .project-card:nth-child(3)::after {
-      background-size: 36px 36px;
-      background-image: url('/images/icon-house.svg');
-    }
-
-    .project-card:nth-child(4)::before {
-      background: linear-gradient(135deg, var(--green), var(--blue));
-    }
-
-    .project-card:nth-child(4)::after {
-      background-size: 28px 28px;
-      background-image: url('/images/icon-terminal.svg');
-    }
-
-    .notes-list {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
+    .archive-header { margin: 38px 0 36px; }
+    .archive-header .eyebrow { margin-bottom: 22px; }
+    .archive-header h1 { font-size: clamp(50px, 8vw, 84px); }
+    .archive-header p { max-width: 650px; margin: 22px 0 0; color: var(--muted); font-size: 18px; line-height: 1.65; }
+    .back-link { display: inline-flex; color: var(--muted); font-size: 14px; font-weight: 600; }
+    .back-link:hover { color: var(--ink); }
+    .notes-list { grid-template-columns: 1fr; gap: 12px; }
     a.note-card {
       min-height: 0;
       padding: 16px 24px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
-      grid-template-areas:
-        "meta meta"
-        "title title"
-        "description read";
+      grid-template-areas: "meta meta" "title title" "description read";
       column-gap: 28px;
       row-gap: 0;
       align-items: center;
     }
-
-    .note-card-top {
-      grid-area: meta;
-      margin: 0 0 12px;
-    }
-
-    .note-card h3 {
-      grid-area: title;
-      margin: 0 0 6px;
-      font-size: 22px;
-    }
-
-    .note-card p {
-      grid-area: description;
-      max-width: none;
-      margin: 0;
-    }
-
-    .note-read {
-      grid-area: read;
-      align-self: center;
-      margin: 0;
-      white-space: nowrap;
-    }
-
-    .note-card .tag {
-      padding: 5px 9px;
-      font-size: 11px;
-      line-height: 1.1;
-    }
-
-    @media (max-width: 880px) {
-      .projects {
-        grid-template-columns: 1fr;
-      }
-    }
-
+    .note-card-top { grid-area: meta; margin: 0 0 12px; }
+    .note-card h3 { grid-area: title; margin: 0 0 6px; font-size: 22px; }
+    .note-card p { grid-area: description; max-width: none; margin: 0; }
+    .note-read { grid-area: read; align-self: center; margin: 0; white-space: nowrap; }
+    .note-card .tag { padding: 5px 9px; font-size: 11px; line-height: 1.1; }
     @media (max-width: 640px) {
-      a.note-card {
-        display: block;
-        padding: 18px 20px;
-      }
-
-      .note-card-top {
-        margin-bottom: 14px;
-      }
-
-      .note-card h3 {
-        margin: 0;
-      }
-
-      .note-card p {
-        margin-top: 10px;
-      }
-
-      .note-read {
-        display: inline-flex;
-        margin-top: 14px;
-      }
-    }  </style>
+      .archive-header { margin-top: 32px; }
+      .archive-header p { font-size: 16px; }
+      a.note-card { display: block; padding: 18px 20px; }
+      .note-card-top { margin-bottom: 14px; }
+      .note-card h3 { margin: 0; }
+      .note-card p { margin-top: 10px; }
+      .note-read { display: inline-flex; margin-top: 14px; }
+    }
+  </style>
 </head>
 <body>
   <main class="page">
-
     <header class="nav" aria-label="Primary navigation">
       <a class="brand" href="/" aria-label="Michael Camilleri home">
         <span class="mark" aria-hidden="true">
@@ -145,94 +67,20 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
-        <a href="#projects">Projects</a>
-        <a href="#notes">Notes</a>
-        <a href="#contact">Contact</a>
+        <a href="/#projects">Projects</a>
+        <a href="/notes/">Notes</a>
+        <a href="/#contact">Contact</a>
       </nav>
     </header>
-
-    <div class="hero">
-      <section class="hero-card" aria-labelledby="hero-title">
-        <div class="eyebrow"><span class="dot"></span> Software engineer · Maltese · Seattle-based</div>
-        <h1 id="hero-title"><span class="gradient-text">Useful little things</span> for the web.</h1>
-        <p class="intro">I'm a Maltese software engineer based in Seattle (and occasionally Malta and Slovakia). I build payments software by day and practical internet projects by night. Football, wine, rentals, and simple tools that just work.</p>
-        <p class="intro">I also enjoy photography, cooking, discovering wine, and collecting mechanical watches. When I'm not doing that, I'm probably travelling with Frederika, pretending I know how to play guitar and chess, or hanging out with Gaston, my lovable French bulldog.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View projects</a>
-          <a class="button secondary" href="https://mcam.pics" target="_blank" rel="noopener noreferrer">Photography</a>
-          <a class="button secondary" href="https://github.com/michaelcamilleri" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </section>
-
-      <aside class="side-stack" aria-label="About Michael Camilleri">
-        <section class="side-card">
-          <h2>A home base.</h2>
-          <p>This is a place for the things I build, the places I care about, and the occasional note worth writing down.</p>
-          <div class="stats" aria-label="Highlights">
-            <div class="stat">
-              <strong>20+</strong>
-              <span>years coding</span>
-              <span class="stat-sub">Java · Payments · Travel</span>
-            </div>
-            <div class="stat">
-              <strong>3</strong>
-              <span>places I call home</span>
-              <span class="stat-sub">Malta · Seattle · Slovakia</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="side-card">
-          <h2>Current interests.</h2>
-          <ul class="signal-list">
-            <li>Small, focused software with clean interfaces</li>
-            <li>Football tools for organizers and fans</li>
-            <li>Making wine collections enjoyable to manage</li>
-            <li>Elegant websites for independent vacation rental hosts</li>
-          </ul>
-        </section>
-
-        <section class="side-card photo-card" aria-label="Gaston at a beer garden in Munich">
-          <img src="images/gaston.jpg" alt="Gaston the French bulldog sitting next to a Hofbräuhaus beer stein at a Munich beer garden" />
-          <p class="photo-caption">Gaston · Munich · 2023</p>
-        </section>
-      </aside>
-    </div>
-
-    <section id="projects" class="reveal delay-1" aria-labelledby="projects-title">
-      <div class="section-title">
-        <h2 id="projects-title">Projects.</h2>
-      </div>
-      <div class="projects">
-        <a class="project-card reveal-item" style="--reveal-delay: 60ms" href="https://fielderic.com/" target="_blank" rel="noopener noreferrer">
-          <h3>Field Eric</h3>
-          <p>A social football app for organizers who need a few more players and players who want a casual match.</p>
-          <span>Visit fielderic.com</span>
-        </a>
-        <a class="project-card reveal-item" style="--reveal-delay: 120ms" href="https://sideways.wine/" target="_blank" rel="noopener noreferrer">
-          <h3>Sideways</h3>
-          <p>A personal wine cellar app for keeping track of bottles, storage, tasting notes, and what to drink next.</p>
-          <span>Visit sideways.wine</span>
-        </a>
-        <a class="project-card reveal-item" style="--reveal-delay: 180ms" href="https://pagesforrentals.com/" target="_blank" rel="noopener noreferrer">
-          <h3><span style="font-weight:600">Pages</span><span style="font-weight:400">for</span><span style="font-weight:600">Rentals</span></h3>
-          <p>Elegant property websites for hosts who want more trust, more control, and more direct bookings.</p>
-          <span>Visit pagesforrentals.com</span>
-        </a>
-        <a class="project-card reveal-item" style="--reveal-delay: 240ms" href="https://implementeurs.com/" target="_blank" rel="noopener noreferrer">
-          <h3>Implementeurs</h3>
-          <p>The little software umbrella for experiments, web products, and useful things that deserve to exist.</p>
-          <span>Visit implementeurs.com</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="notes" class="reveal delay-2" aria-labelledby="notes-title">
-      <div class="section-title">
-        <h2 id="notes-title">Notes.</h2>
+    <a class="back-link" href="/">← Home</a>
+    <section aria-labelledby="notes-title">
+      <div class="archive-header">
+        <div class="eyebrow"><span class="dot"></span> Occasional writing</div>
+        <h1 id="notes-title">Notes.</h1>
+        <p>Things I build, places I go, and the occasional thought worth writing down.</p>
       </div>
       <div class="notes-list">
-        <a href="notes/have-dog-will-travel/" class="note-card reveal-item" style="--reveal-delay: 60ms">
+        <a href="/notes/have-dog-will-travel/" class="note-card" style="--reveal-delay: 60ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Travel</span>
@@ -244,7 +92,7 @@
           <p>Ten years, ten countries, and an unreasonable amount of luggage.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/mildly-eccentric-and-rather-cool/" class="note-card reveal-item" style="--reveal-delay: 120ms">
+        <a href="/notes/mildly-eccentric-and-rather-cool/" class="note-card" style="--reveal-delay: 120ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Watches</span>
@@ -256,7 +104,7 @@
           <p>How I ended up collecting mechanical watches, and why the ones that matter most are rarely the most expensive.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card reveal-item" style="--reveal-delay: 180ms">
+        <a href="/notes/two-overflowing-coolers-and-a-spreadsheet/" class="note-card" style="--reveal-delay: 180ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Wine</span>
@@ -268,7 +116,7 @@
           <p>How a growing wine collection turned a useful Google Sheet into a small piece of software.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/when-ai-becomes-a-workflow/" class="note-card reveal-item" style="--reveal-delay: 240ms">
+        <a href="/notes/when-ai-becomes-a-workflow/" class="note-card" style="--reveal-delay: 240ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">AI</span>
@@ -280,7 +128,7 @@
           <p>A cocktail project, a custom content tool, and the AI-assisted loop that made it possible.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/field-eric-again/" class="note-card reveal-item" style="--reveal-delay: 300ms">
+        <a href="/notes/field-eric-again/" class="note-card" style="--reveal-delay: 300ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Football</span>
@@ -292,7 +140,7 @@
           <p>A personal note on Field Eric, a small football app I've kept coming back to for years.</p>
           <span class="note-read">Read note →</span>
         </a>
-        <a href="notes/pagesforrentals/" class="note-card reveal-item" style="--reveal-delay: 360ms">
+        <a href="/notes/pagesforrentals/" class="note-card" style="--reveal-delay: 360ms">
           <div class="note-card-top">
             <span style="display:flex;gap:8px;flex-wrap:wrap;">
               <span class="tag">Rentals</span>
@@ -306,23 +154,6 @@
         </a>
       </div>
     </section>
-
-    <section id="contact" class="contact reveal delay-3" aria-label="Contact">
-      <div>
-        <strong>Say hello.</strong>
-        <span>Best for projects, collaboration, or anything that should not live in a LinkedIn DM.</span>
-      </div>
-      <div class="contact-email-row">
-        <a class="contact-email" href="mailto:hello@michaelcamilleri.net">hello@michaelcamilleri.net</a>
-        <button class="copy-email" type="button" data-copy="hello@michaelcamilleri.net" aria-label="Copy email address">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M8 8.5A2.5 2.5 0 0 1 10.5 6h6A2.5 2.5 0 0 1 19 8.5v8A2.5 2.5 0 0 1 16.5 19h-6A2.5 2.5 0 0 1 8 16.5v-8Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M5 14.5v-7A2.5 2.5 0 0 1 7.5 5h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-    </section>
-
     <footer class="footer">
       <span>© 2026 Michael Camilleri</span>
       <span class="footer-right">
