@@ -91,6 +91,41 @@
       .footer{display:block}
       .footer span:last-child{display:flex;align-items:center;gap:6px;margin-top:8px}
     }
+  
+    .article-pagination {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    .article-pagination a {
+      display: block;
+      min-width: 0;
+      padding: 14px 0;
+      text-decoration: none;
+    }
+    .article-pagination a.next { grid-column: 2; text-align: right; }
+    .article-pagination .direction {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .article-pagination strong {
+      display: block;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .article-pagination a:hover strong { text-decoration: underline; }
+    @media (max-width: 620px) {
+      .article-pagination { grid-template-columns: 1fr; gap: 4px; }
+      .article-pagination a.next { grid-column: 1; text-align: left; }
+    }
   </style>
 </head>
 <body>
@@ -158,6 +193,16 @@
 
         <p>MixologAI is the first public version of that idea. It is a cocktail archive, yes. But it is also a small experiment in what one person can make now with taste, code, conversation, and a lot of iteration. The drinks are still the point. AI just made it possible to write them down properly.</p>
       </div>
+      <nav class="article-pagination" aria-label="Previous and next notes">
+        <a class="previous" rel="prev" href="/notes/two-overflowing-coolers-and-a-spreadsheet/">
+          <span class="direction">← Previous note</span>
+          <strong>Two overflowing coolers and a spreadsheet</strong>
+        </a>
+        <a class="next" rel="next" href="/notes/field-eric-again/">
+          <span class="direction">Next note →</span>
+          <strong>Field Eric, again</strong>
+        </a>
+      </nav>
     </article>
 
     <footer class="footer">

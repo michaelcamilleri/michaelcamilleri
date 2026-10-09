@@ -78,6 +78,41 @@
       .footer{display:block}
       .footer span:last-child{display:flex;align-items:center;gap:6px;margin-top:8px}
     }
+  
+    .article-pagination {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    .article-pagination a {
+      display: block;
+      min-width: 0;
+      padding: 14px 0;
+      text-decoration: none;
+    }
+    .article-pagination a.next { grid-column: 2; text-align: right; }
+    .article-pagination .direction {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .article-pagination strong {
+      display: block;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .article-pagination a:hover strong { text-decoration: underline; }
+    @media (max-width: 620px) {
+      .article-pagination { grid-template-columns: 1fr; gap: 4px; }
+      .article-pagination a.next { grid-column: 1; text-align: left; }
+    }
   </style>
 </head>
 <body>
@@ -151,6 +186,16 @@
 
         <p>If it works well for us, perhaps it will eventually be useful to other people with overflowing wine coolers, ambitious spreadsheets, and a persistent inability to leave a good tasting room empty-handed. At the very least, the next time a few too many bottles follow us home, we will know exactly where we put them.</p>
       </div>
+      <nav class="article-pagination" aria-label="Previous and next notes">
+        <a class="previous" rel="prev" href="/notes/mildly-eccentric-and-rather-cool/">
+          <span class="direction">← Previous note</span>
+          <strong>Mildly eccentric and rather cool</strong>
+        </a>
+        <a class="next" rel="next" href="/notes/when-ai-becomes-a-workflow/">
+          <span class="direction">Next note →</span>
+          <strong>When AI Becomes a Workflow</strong>
+        </a>
+      </nav>
     </article>
 
     <footer class="footer">
